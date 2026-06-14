@@ -8,15 +8,50 @@
       "url": "https://www.npmjs.com/package/adhan",
       "repo": "https://github.com/batoulapps/adhan-js",
       "license": "MIT",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "format": "npm",
       "free": true,
       "auth_required": false,
       "scholar_reviewed": false,
       "maintained": true,
-      "tags": ["prayer-times", "adhan", "calculation", "typescript", "offline"],
+      "tags": [
+        "prayer-times",
+        "adhan",
+        "calculation",
+        "typescript",
+        "offline"
+      ],
       "added": "2026-06-14",
       "attribution": "Batoul Apps"
+    },
+    {
+      "id": "shamela",
+      "name": "Al-Maktabah Al-Shamilah (Shamela)",
+      "description": "The largest digital Islamic library, containing tens of thousands of classical Arabic Islamic texts including tafsir, hadith, fiqh, seerah, and more. Available as offline software and partial online access.",
+      "category": "general",
+      "url": "https://shamela.ws",
+      "license": "Proprietary (free)",
+      "languages": [
+        "ar"
+      ],
+      "format": "sqlite",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": true,
+      "tags": [
+        "library",
+        "classical",
+        "arabic",
+        "tafsir",
+        "fiqh",
+        "seerah",
+        "offline"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Al-Maktabah Al-Shamilah"
     },
     {
       "id": "aladhan-api",
@@ -27,13 +62,21 @@
       "docs": "https://aladhan.com/prayer-times-api",
       "repo": "https://github.com/islamic-network/api.aladhan.com",
       "license": "MIT",
-      "languages": ["ar", "en"],
+      "languages": [
+        "ar",
+        "en"
+      ],
       "format": "rest-api",
       "free": true,
       "auth_required": false,
       "scholar_reviewed": false,
       "maintained": true,
-      "tags": ["prayer-times", "hijri", "calendar", "qibla"],
+      "tags": [
+        "prayer-times",
+        "hijri",
+        "calendar",
+        "qibla"
+      ],
       "added": "2026-06-14",
       "attribution": "islamic-network"
     },
@@ -47,13 +90,23 @@
       "docs": "https://alquran.cloud/api",
       "repo": "https://github.com/islamic-network/alquran.cloud",
       "license": "MIT",
-      "languages": ["ar", "en", "ur", "tr", "id"],
+      "languages": [
+        "ar",
+        "en",
+        "ur",
+        "tr",
+        "id"
+      ],
       "format": "rest-api",
       "free": true,
       "auth_required": false,
       "scholar_reviewed": true,
       "maintained": true,
-      "tags": ["quran", "translation", "audio"],
+      "tags": [
+        "quran",
+        "translation",
+        "audio"
+      ],
       "added": "2026-06-14",
       "attribution": "islamic-network"
     },
@@ -65,13 +118,22 @@
       "url": "https://hadithapi.com",
       "docs": "https://hadithapi.com/docs",
       "license": "Proprietary (free tier)",
-      "languages": ["ar", "en", "ur"],
+      "languages": [
+        "ar",
+        "en",
+        "ur"
+      ],
       "format": "rest-api",
       "free": true,
       "auth_required": true,
       "scholar_reviewed": true,
       "maintained": true,
-      "tags": ["hadith", "bukhari", "muslim", "sunnah"],
+      "tags": [
+        "hadith",
+        "bukhari",
+        "muslim",
+        "sunnah"
+      ],
       "added": "2026-06-14",
       "attribution": "HadithAPI.com"
     },
@@ -85,15 +147,93 @@
       "docs": "https://api.quran.com/documentation/v4",
       "repo": "https://github.com/quran/quran.com-api",
       "license": "MIT",
-      "languages": ["ar", "en", "ur", "fr", "de", "tr", "id", "bn"],
+      "languages": [
+        "ar",
+        "en",
+        "ur",
+        "fr",
+        "de",
+        "tr",
+        "id",
+        "bn"
+      ],
       "format": "rest-api",
       "free": true,
       "auth_required": false,
       "scholar_reviewed": true,
       "maintained": true,
-      "tags": ["quran", "translation", "audio", "tafsir", "recitation"],
+      "tags": [
+        "quran",
+        "translation",
+        "audio",
+        "tafsir",
+        "recitation"
+      ],
       "added": "2026-06-14",
       "attribution": "Quran.com"
+    },
+    {
+      "id": "sunnah-com",
+      "name": "Sunnah.com API",
+      "description": "REST API for the major hadith collections (Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah, Malik, Ahmad, Darimi) with Arabic text and English translations.",
+      "category": "hadith",
+      "url": "https://sunnah.com",
+      "docs": "https://sunnah.com/developers",
+      "repo": "https://github.com/sunnah-com/api",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "format": "rest-api",
+      "free": true,
+      "auth_required": true,
+      "scholar_reviewed": true,
+      "maintained": true,
+      "tags": [
+        "hadith",
+        "bukhari",
+        "muslim",
+        "sunnah",
+        "arabic"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Sunnah.com"
+    },
+    {
+      "id": "tanzil",
+      "name": "Tanzil Quran Corpus",
+      "description": "Downloadable Quran text files in multiple formats (Unicode, XML, SQL) with 40+ translations. The most widely used open Quran text dataset among developers.",
+      "category": "quran",
+      "subcategory": "text",
+      "url": "https://tanzil.net",
+      "docs": "https://tanzil.net/docs/",
+      "license": "CC BY 3.0",
+      "languages": [
+        "ar",
+        "en",
+        "ur",
+        "tr",
+        "fr",
+        "de",
+        "id",
+        "bn",
+        "fa"
+      ],
+      "format": "xml",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": true,
+      "tags": [
+        "quran",
+        "text",
+        "dataset",
+        "translation",
+        "offline"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Tanzil.net"
     }
   ]
 }

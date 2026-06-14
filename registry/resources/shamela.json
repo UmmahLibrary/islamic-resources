@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "shamela",
+  "name": "Al-Maktabah Al-Shamilah (Shamela)",
+  "description": "The largest digital Islamic library, containing tens of thousands of classical Arabic Islamic texts including tafsir, hadith, fiqh, seerah, and more. Available as offline software and partial online access.",
+  "category": "general",
+  "url": "https://shamela.ws",
+  "license": "Proprietary (free)",
+  "languages": ["ar"],
+  "format": "sqlite",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["library", "classical", "arabic", "tafsir", "fiqh", "seerah", "offline"],
+  "added": "2026-06-14",
+  "attribution": "Al-Maktabah Al-Shamilah"
+}

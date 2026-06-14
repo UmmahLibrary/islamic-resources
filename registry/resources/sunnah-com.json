@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "sunnah-com",
+  "name": "Sunnah.com API",
+  "description": "REST API for the major hadith collections (Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah, Malik, Ahmad, Darimi) with Arabic text and English translations.",
+  "category": "hadith",
+  "url": "https://sunnah.com",
+  "docs": "https://sunnah.com/developers",
+  "repo": "https://github.com/sunnah-com/api",
+  "license": "MIT",
+  "languages": ["ar", "en"],
+  "format": "rest-api",
+  "free": true,
+  "auth_required": true,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["hadith", "bukhari", "muslim", "sunnah", "arabic"],
+  "added": "2026-06-14",
+  "attribution": "Sunnah.com"
+}

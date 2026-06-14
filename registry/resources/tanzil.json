@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "tanzil",
+  "name": "Tanzil Quran Corpus",
+  "description": "Downloadable Quran text files in multiple formats (Unicode, XML, SQL) with 40+ translations. The most widely used open Quran text dataset among developers.",
+  "category": "quran",
+  "subcategory": "text",
+  "url": "https://tanzil.net",
+  "docs": "https://tanzil.net/docs/",
+  "license": "CC BY 3.0",
+  "languages": ["ar", "en", "ur", "tr", "fr", "de", "id", "bn", "fa"],
+  "format": "xml",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["quran", "text", "dataset", "translation", "offline"],
+  "added": "2026-06-14",
+  "attribution": "Tanzil.net"
+}

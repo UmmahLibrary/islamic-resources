@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "salah-rs",
+  "name": "Salah (Rust)",
+  "description": "Rust crate for Islamic prayer time calculation using the Jean Meeus astronomical algorithms. Available on crates.io as 'salah'. Suitable for server-side, embedded, and WebAssembly targets.",
+  "category": "prayer-times",
+  "url": "https://crates.io/crates/salah",
+  "repo": "https://github.com/insha/salah",
+  "license": "MIT",
+  "languages": ["ar"],
+  "format": "cargo",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["prayer-times", "rust", "wasm", "offline", "embedded"],
+  "added": "2026-06-14",
+  "attribution": "insha"
+}

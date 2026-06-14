@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "hijridate",
+  "name": "hijridate (Python)",
+  "description": "Python library for accurate Hijri/Gregorian date conversion based on the Umm al-Qura calendar, verified against KACST data. Covers 1343–1500 AH. Zero dependencies, 100% test coverage, actively maintained.",
+  "category": "calendar",
+  "url": "https://pypi.org/project/hijridate/",
+  "docs": "https://hijridate.readthedocs.io",
+  "repo": "https://github.com/dralshehri/hijridate",
+  "license": "MIT",
+  "languages": ["ar", "en"],
+  "format": "pip",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["hijri", "calendar", "umm-al-qura", "python", "date-conversion", "offline"],
+  "added": "2026-06-14",
+  "attribution": "Mohammed Al-Shehri"
+}

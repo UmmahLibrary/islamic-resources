@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "hisnul-muslim-json",
+  "name": "Hisnul Muslim JSON",
+  "description": "Complete Hisnul Muslim (Fortress of the Muslim) dua collection as structured JSON. Covers all chapters of the authentic dua book compiled by Sa'id bin Ali bin Wahf Al-Qahtani, in Arabic with English translation.",
+  "category": "duas",
+  "url": "https://github.com/wafaaelmaandy/Hisn-Muslim-Json",
+  "repo": "https://github.com/wafaaelmaandy/Hisn-Muslim-Json",
+  "license": "MIT",
+  "languages": ["ar", "en"],
+  "format": "json",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": false,
+  "tags": ["duas", "hisnul-muslim", "fortress-of-the-muslim", "offline", "dataset"],
+  "added": "2026-06-14",
+  "attribution": "Sa'id Al-Qahtani (book) / wafaaelmaandy (JSON)"
+}

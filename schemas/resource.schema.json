@@ -30,7 +30,7 @@
     },
     "format": {
       "type": "string",
-      "enum": ["rest-api", "npm", "json", "xml", "csv", "graphql", "sqlite"]
+      "enum": ["rest-api", "npm", "pip", "swift", "maven", "cargo", "pub", "json", "xml", "csv", "graphql", "sqlite"]
     },
     "free": { "type": "boolean" },
     "auth_required": { "type": "boolean" },

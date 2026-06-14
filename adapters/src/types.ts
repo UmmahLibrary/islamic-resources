@@ -11,6 +11,11 @@ export type ResourceCategory =
 export type ResourceFormat =
   | 'rest-api'
   | 'npm'
+  | 'pip'
+  | 'swift'
+  | 'maven'
+  | 'cargo'
+  | 'pub'
   | 'json'
   | 'xml'
   | 'csv'

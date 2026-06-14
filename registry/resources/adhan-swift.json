@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "adhan-swift",
+  "name": "Adhan Swift",
+  "description": "High-precision Islamic prayer time calculation library for iOS, macOS, and watchOS. Swift Package Manager and CocoaPods compatible. Supports all major calculation methods and Objective-C interop.",
+  "category": "prayer-times",
+  "url": "https://github.com/batoulapps/adhan-swift",
+  "repo": "https://github.com/batoulapps/adhan-swift",
+  "license": "MIT",
+  "languages": ["ar"],
+  "format": "swift",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["prayer-times", "ios", "macos", "watchos", "swift", "spm", "offline"],
+  "added": "2026-06-14",
+  "attribution": "Batoul Apps"
+}

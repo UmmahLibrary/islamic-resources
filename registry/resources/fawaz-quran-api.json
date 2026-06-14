@@ -1,0 +1,21 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "fawaz-quran-api",
+  "name": "Quran CDN API (fawazahmed0)",
+  "description": "Free, no-rate-limit Quran API served via jsDelivr CDN. Covers 90+ languages and 440+ translations as static JSON files. No server, no auth, no sign-up — just fetch a URL.",
+  "category": "quran",
+  "subcategory": "text",
+  "url": "https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1",
+  "docs": "https://github.com/fawazahmed0/quran-api/blob/1/README.md",
+  "repo": "https://github.com/fawazahmed0/quran-api",
+  "license": "Unlicense",
+  "languages": ["ar", "en", "ur", "bn", "tr", "id", "fr", "ru", "zh", "es", "de", "fa"],
+  "format": "json",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["quran", "translation", "cdn", "no-auth", "multilingual", "440-translations"],
+  "added": "2026-06-14",
+  "attribution": "fawazahmed0"
+}

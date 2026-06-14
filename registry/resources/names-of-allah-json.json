@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "names-of-allah-json",
+  "name": "99 Names of Allah (JSON)",
+  "description": "Structured JSON dataset of the 99 Names of Allah (Asma ul-Husna) with Arabic text, English transliteration, meaning, description, and Quranic verse references for each name.",
+  "category": "names",
+  "url": "https://github.com/KabDeveloper/99-Names-Of-Allah",
+  "repo": "https://github.com/KabDeveloper/99-Names-Of-Allah",
+  "license": "MIT",
+  "languages": ["ar", "en"],
+  "format": "json",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": false,
+  "tags": ["asma-ul-husna", "names-of-allah", "99-names", "quran-references", "dataset"],
+  "added": "2026-06-14",
+  "attribution": "KabDeveloper"
+}

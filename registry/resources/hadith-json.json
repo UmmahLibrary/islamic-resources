@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "hadith-json",
+  "name": "hadith-json (AhmedBaset)",
+  "description": "Complete JSON dataset of 50,884 hadiths from 17 collections including Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah, Muwatta Malik, Musnad Ahmad, Riyad al-Salihin, 40 Nawawi, 40 Qudsi, Bulugh al-Maram, and more — in Arabic and English.",
+  "category": "hadith",
+  "url": "https://github.com/AhmedBaset/hadith-json",
+  "repo": "https://github.com/AhmedBaset/hadith-json",
+  "license": "MIT",
+  "languages": ["ar", "en"],
+  "format": "json",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["hadith", "bukhari", "muslim", "dataset", "17-collections", "offline"],
+  "added": "2026-06-14",
+  "attribution": "AhmedBaset (sourced from Sunnah.com)"
+}

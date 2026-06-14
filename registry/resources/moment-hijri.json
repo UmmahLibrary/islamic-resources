@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "moment-hijri",
+  "name": "moment-hijri",
+  "description": "moment.js plugin for Umm al-Qura Hijri calendar support in JavaScript. Adds Hijri date parsing, formatting, and arithmetic to moment.js. Widely used in web apps requiring Islamic date display.",
+  "category": "calendar",
+  "url": "https://www.npmjs.com/package/moment-hijri",
+  "repo": "https://github.com/xsoh/moment-hijri",
+  "license": "MIT",
+  "languages": ["ar", "en"],
+  "format": "npm",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": false,
+  "tags": ["hijri", "calendar", "moment", "javascript", "umm-al-qura", "date-conversion"],
+  "added": "2026-06-14",
+  "attribution": "Suhail Alkowaileet"
+}

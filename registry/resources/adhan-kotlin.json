@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "adhan-kotlin",
+  "name": "Adhan Kotlin Multiplatform",
+  "description": "Kotlin Multiplatform prayer time calculation library available on Maven Central. Targets Android, JVM, iOS, and JavaScript from a single codebase. Published as com.batoulapps.adhan:adhan2.",
+  "category": "prayer-times",
+  "url": "https://github.com/batoulapps/adhan-kotlin",
+  "repo": "https://github.com/batoulapps/adhan-kotlin",
+  "license": "MIT",
+  "languages": ["ar"],
+  "format": "maven",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["prayer-times", "android", "kotlin", "multiplatform", "jvm", "offline"],
+  "added": "2026-06-14",
+  "attribution": "Batoul Apps"
+}

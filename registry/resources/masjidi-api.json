@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "masjidi-api",
+  "name": "Masjidi API",
+  "description": "Open-source REST API providing mosque data via RESTful endpoints: locations (lat/lng, address, contact), prayer times, iqamah times, capacity, events, and services. Crowdsourced iqamah data is its key differentiator from calculated prayer time APIs.",
+  "category": "general",
+  "url": "https://masjidiapp.com",
+  "repo": "https://github.com/MasjidiApp/MasjidiAPI",
+  "license": "MIT",
+  "languages": ["en", "ar"],
+  "format": "rest-api",
+  "free": true,
+  "auth_required": true,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["mosque", "masjid", "iqamah", "prayer-times", "location", "crowdsourced"],
+  "added": "2026-06-14",
+  "attribution": "Masjidi App"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "quranjs-api",
+  "name": "Quran Foundation SDK (@quranjs/api)",
+  "description": "Official TypeScript/JavaScript SDK for the Quran Foundation API (quran.com). Provides typed access to verses, chapters, translations, tafsir, audio recitations, and search — the most complete Quran API available.",
+  "category": "quran",
+  "subcategory": "text",
+  "url": "https://www.npmjs.com/package/@quranjs/api",
+  "docs": "https://api-docs.quran.foundation",
+  "repo": "https://github.com/quran/api-js",
+  "license": "MIT",
+  "languages": ["ar", "en", "ur", "fr", "de", "tr", "id", "bn", "ru"],
+  "format": "npm",
+  "free": true,
+  "auth_required": true,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["quran", "translation", "tafsir", "audio", "search", "typescript", "sdk"],
+  "added": "2026-06-14",
+  "attribution": "Quran Foundation"
+}

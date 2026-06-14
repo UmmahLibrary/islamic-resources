@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "adhanpy",
+  "name": "adhanpy (Python)",
+  "description": "Python port of the Adhan prayer time library. Zero external dependencies, works offline. Install with pip. Supports all major calculation methods including MWL, ISNA, Egypt, Makkah, Karachi, Tehran, and Jafari.",
+  "category": "prayer-times",
+  "url": "https://pypi.org/project/adhanpy/",
+  "repo": "https://github.com/alphahm/adhanpy",
+  "license": "MIT",
+  "languages": ["ar"],
+  "format": "pip",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["prayer-times", "python", "offline", "pip", "zero-dependencies"],
+  "added": "2026-06-14",
+  "attribution": "alphahm"
+}

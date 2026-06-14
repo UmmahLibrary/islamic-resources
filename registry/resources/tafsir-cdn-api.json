@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "tafsir-cdn-api",
+  "name": "Tafsir CDN API (spa5k)",
+  "description": "Free, no-rate-limit tafsir API serving 122 tafsirs via jsDelivr CDN as static JSON. Covers classical and contemporary exegesis in Arabic, English, Urdu, and other languages. No server or auth required.",
+  "category": "tafsir",
+  "url": "https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/",
+  "docs": "https://github.com/spa5k/tafsir_api",
+  "repo": "https://github.com/spa5k/tafsir_api",
+  "license": "MIT",
+  "languages": ["ar", "en", "ur", "tr", "id", "fr"],
+  "format": "json",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["tafsir", "cdn", "no-auth", "122-tafsirs", "exegesis"],
+  "added": "2026-06-14",
+  "attribution": "spa5k"
+}

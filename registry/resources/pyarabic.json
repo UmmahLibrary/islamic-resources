@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "pyarabic",
+  "name": "PyArabic",
+  "description": "Python library for Arabic text manipulation and processing. Covers diacritic (tashkeel) handling, tokenization, normalization, transliteration, and text comparison. Essential preprocessing tool for Islamic text analysis and Quran/hadith NLP pipelines.",
+  "category": "general",
+  "url": "https://pypi.org/project/pyarabic/",
+  "docs": "https://pyarabic.readthedocs.io",
+  "repo": "https://github.com/linuxscout/pyarabic",
+  "license": "GPL-2.0",
+  "languages": ["ar"],
+  "format": "pip",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["arabic", "nlp", "tashkeel", "tokenization", "normalization", "python", "preprocessing"],
+  "added": "2026-06-14",
+  "attribution": "Taha Zerrouki"
+}

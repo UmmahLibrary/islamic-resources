@@ -1,6 +1,88 @@
 {
   "resources": [
     {
+      "id": "names-of-allah-json",
+      "name": "99 Names of Allah (JSON)",
+      "description": "Structured JSON dataset of the 99 Names of Allah (Asma ul-Husna) with Arabic text, English transliteration, meaning, description, and Quranic verse references for each name.",
+      "category": "names",
+      "url": "https://github.com/KabDeveloper/99-Names-Of-Allah",
+      "repo": "https://github.com/KabDeveloper/99-Names-Of-Allah",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "format": "json",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": false,
+      "tags": [
+        "asma-ul-husna",
+        "names-of-allah",
+        "99-names",
+        "quran-references",
+        "dataset"
+      ],
+      "added": "2026-06-14",
+      "attribution": "KabDeveloper"
+    },
+    {
+      "id": "adhan-kotlin",
+      "name": "Adhan Kotlin Multiplatform",
+      "description": "Kotlin Multiplatform prayer time calculation library available on Maven Central. Targets Android, JVM, iOS, and JavaScript from a single codebase. Published as com.batoulapps.adhan:adhan2.",
+      "category": "prayer-times",
+      "url": "https://github.com/batoulapps/adhan-kotlin",
+      "repo": "https://github.com/batoulapps/adhan-kotlin",
+      "license": "MIT",
+      "languages": [
+        "ar"
+      ],
+      "format": "maven",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "prayer-times",
+        "android",
+        "kotlin",
+        "multiplatform",
+        "jvm",
+        "offline"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Batoul Apps"
+    },
+    {
+      "id": "adhan-swift",
+      "name": "Adhan Swift",
+      "description": "High-precision Islamic prayer time calculation library for iOS, macOS, and watchOS. Swift Package Manager and CocoaPods compatible. Supports all major calculation methods and Objective-C interop.",
+      "category": "prayer-times",
+      "url": "https://github.com/batoulapps/adhan-swift",
+      "repo": "https://github.com/batoulapps/adhan-swift",
+      "license": "MIT",
+      "languages": [
+        "ar"
+      ],
+      "format": "swift",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "prayer-times",
+        "ios",
+        "macos",
+        "watchos",
+        "swift",
+        "spm",
+        "offline"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Batoul Apps"
+    },
+    {
       "id": "adhan-js",
       "name": "Adhan.js",
       "description": "High-precision prayer time calculation library for JavaScript and TypeScript. Supports MWL, ISNA, Egypt, Makkah, Karachi, Tehran, and Jafari calculation methods.",
@@ -25,6 +107,32 @@
       ],
       "added": "2026-06-14",
       "attribution": "Batoul Apps"
+    },
+    {
+      "id": "adhanpy",
+      "name": "adhanpy (Python)",
+      "description": "Python port of the Adhan prayer time library. Zero external dependencies, works offline. Install with pip. Supports all major calculation methods including MWL, ISNA, Egypt, Makkah, Karachi, Tehran, and Jafari.",
+      "category": "prayer-times",
+      "url": "https://pypi.org/project/adhanpy/",
+      "repo": "https://github.com/alphahm/adhanpy",
+      "license": "MIT",
+      "languages": [
+        "ar"
+      ],
+      "format": "pip",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "prayer-times",
+        "python",
+        "offline",
+        "pip",
+        "zero-dependencies"
+      ],
+      "added": "2026-06-14",
+      "attribution": "alphahm"
     },
     {
       "id": "shamela",
@@ -109,6 +217,35 @@
       ],
       "added": "2026-06-14",
       "attribution": "islamic-network"
+    },
+    {
+      "id": "camel-tools",
+      "name": "CAMeL Tools",
+      "description": "Comprehensive Arabic NLP toolkit by NYU Abu Dhabi. Provides morphological analysis, dialect identification, named entity recognition, sentiment analysis, and text utilities for Modern Standard Arabic and Classical Arabic — directly applicable to Quranic and hadith text processing.",
+      "category": "general",
+      "url": "https://pypi.org/project/camel-tools/",
+      "docs": "https://camel-tools.readthedocs.io",
+      "repo": "https://github.com/CAMeL-Lab/camel_tools",
+      "license": "MIT",
+      "languages": [
+        "ar"
+      ],
+      "format": "pip",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "arabic",
+        "nlp",
+        "morphology",
+        "classical-arabic",
+        "quran",
+        "python",
+        "ner"
+      ],
+      "added": "2026-06-14",
+      "attribution": "NYU Abu Dhabi CAMeL Lab"
     },
     {
       "id": "dorar-hadith-api",
@@ -236,6 +373,204 @@
       "attribution": "fawazahmed0"
     },
     {
+      "id": "hadith-json",
+      "name": "hadith-json (AhmedBaset)",
+      "description": "Complete JSON dataset of 50,884 hadiths from 17 collections including Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah, Muwatta Malik, Musnad Ahmad, Riyad al-Salihin, 40 Nawawi, 40 Qudsi, Bulugh al-Maram, and more — in Arabic and English.",
+      "category": "hadith",
+      "url": "https://github.com/AhmedBaset/hadith-json",
+      "repo": "https://github.com/AhmedBaset/hadith-json",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "format": "json",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": true,
+      "tags": [
+        "hadith",
+        "bukhari",
+        "muslim",
+        "dataset",
+        "17-collections",
+        "offline"
+      ],
+      "added": "2026-06-14",
+      "attribution": "AhmedBaset (sourced from Sunnah.com)"
+    },
+    {
+      "id": "hijridate",
+      "name": "hijridate (Python)",
+      "description": "Python library for accurate Hijri/Gregorian date conversion based on the Umm al-Qura calendar, verified against KACST data. Covers 1343–1500 AH. Zero dependencies, 100% test coverage, actively maintained.",
+      "category": "calendar",
+      "url": "https://pypi.org/project/hijridate/",
+      "docs": "https://hijridate.readthedocs.io",
+      "repo": "https://github.com/dralshehri/hijridate",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "format": "pip",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "hijri",
+        "calendar",
+        "umm-al-qura",
+        "python",
+        "date-conversion",
+        "offline"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Mohammed Al-Shehri"
+    },
+    {
+      "id": "hisnul-muslim-json",
+      "name": "Hisnul Muslim JSON",
+      "description": "Complete Hisnul Muslim (Fortress of the Muslim) dua collection as structured JSON. Covers all chapters of the authentic dua book compiled by Sa'id bin Ali bin Wahf Al-Qahtani, in Arabic with English translation.",
+      "category": "duas",
+      "url": "https://github.com/wafaaelmaandy/Hisn-Muslim-Json",
+      "repo": "https://github.com/wafaaelmaandy/Hisn-Muslim-Json",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "format": "json",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": false,
+      "tags": [
+        "duas",
+        "hisnul-muslim",
+        "fortress-of-the-muslim",
+        "offline",
+        "dataset"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Sa'id Al-Qahtani (book) / wafaaelmaandy (JSON)"
+    },
+    {
+      "id": "masjidi-api",
+      "name": "Masjidi API",
+      "description": "Open-source REST API providing mosque data via RESTful endpoints: locations (lat/lng, address, contact), prayer times, iqamah times, capacity, events, and services. Crowdsourced iqamah data is its key differentiator from calculated prayer time APIs.",
+      "category": "general",
+      "url": "https://masjidiapp.com",
+      "repo": "https://github.com/MasjidiApp/MasjidiAPI",
+      "license": "MIT",
+      "languages": [
+        "en",
+        "ar"
+      ],
+      "format": "rest-api",
+      "free": true,
+      "auth_required": true,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "mosque",
+        "masjid",
+        "iqamah",
+        "prayer-times",
+        "location",
+        "crowdsourced"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Masjidi App"
+    },
+    {
+      "id": "moment-hijri",
+      "name": "moment-hijri",
+      "description": "moment.js plugin for Umm al-Qura Hijri calendar support in JavaScript. Adds Hijri date parsing, formatting, and arithmetic to moment.js. Widely used in web apps requiring Islamic date display.",
+      "category": "calendar",
+      "url": "https://www.npmjs.com/package/moment-hijri",
+      "repo": "https://github.com/xsoh/moment-hijri",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "format": "npm",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": false,
+      "tags": [
+        "hijri",
+        "calendar",
+        "moment",
+        "javascript",
+        "umm-al-qura",
+        "date-conversion"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Suhail Alkowaileet"
+    },
+    {
+      "id": "morning-evening-adhkar",
+      "name": "Morning & Evening Adhkar DB",
+      "description": "Structured dataset of morning and evening adhkar (remembrances) from authentic Sunnah sources, available in JSON, CSV, SQL, and SQLite formats. All formats are auto-generated from a single primary JSON source via GitHub Actions.",
+      "category": "duas",
+      "url": "https://github.com/Seen-Arabic/Morning-And-Evening-Adhkar-DB",
+      "repo": "https://github.com/Seen-Arabic/Morning-And-Evening-Adhkar-DB",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "format": "json",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": true,
+      "tags": [
+        "adhkar",
+        "dhikr",
+        "morning",
+        "evening",
+        "sunnah",
+        "dataset",
+        "offline"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Seen Arabic"
+    },
+    {
+      "id": "mp3quran-api",
+      "name": "MP3Quran API",
+      "description": "Free REST API for Quran audio recitations. Provides reciters list, surah MP3 direct URLs, rewayat (reading styles), radio streams, and tafsir audio. No auth required, widely used for streaming Quran audio in apps.",
+      "category": "quran",
+      "subcategory": "audio",
+      "url": "https://www.mp3quran.net/eng/api",
+      "docs": "https://www.mp3quran.net/eng/api",
+      "repo": "https://github.com/MP3Quran/apis",
+      "license": "Free to use",
+      "languages": [
+        "ar"
+      ],
+      "format": "rest-api",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": true,
+      "tags": [
+        "quran",
+        "audio",
+        "recitation",
+        "mp3",
+        "streaming",
+        "reciters"
+      ],
+      "added": "2026-06-14",
+      "attribution": "MP3Quran.net"
+    },
+    {
       "id": "muslim-data",
       "name": "Muslim Data",
       "description": "Offline-capable mobile library (Android, iOS, Flutter) providing prayer times, Azkars (Hisnul Muslim), 99 Names of Allah with translations, and an offline geocoder. All data works without an internet connection.",
@@ -267,6 +602,207 @@
       ],
       "added": "2026-06-14",
       "attribution": "Kosrat D. Ahmad (my-prayers)"
+    },
+    {
+      "id": "open-hadith-data",
+      "name": "Open Hadith Data",
+      "description": "Arabic-only hadith dataset in CSV format covering the nine primary collections (Kutub al-Tis'ah): Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah, Muwatta Malik, Musnad Ahmad, and Darimi. Includes both with and without tashkeel (diacritics) variants.",
+      "category": "hadith",
+      "url": "https://github.com/mhashim6/Open-Hadith-Data",
+      "repo": "https://github.com/mhashim6/Open-Hadith-Data",
+      "license": "MIT",
+      "languages": [
+        "ar"
+      ],
+      "format": "csv",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": false,
+      "tags": [
+        "hadith",
+        "arabic",
+        "kutub-tis'ah",
+        "tashkeel",
+        "dataset",
+        "nlp",
+        "offline"
+      ],
+      "added": "2026-06-14",
+      "attribution": "mhashim6"
+    },
+    {
+      "id": "pyarabic",
+      "name": "PyArabic",
+      "description": "Python library for Arabic text manipulation and processing. Covers diacritic (tashkeel) handling, tokenization, normalization, transliteration, and text comparison. Essential preprocessing tool for Islamic text analysis and Quran/hadith NLP pipelines.",
+      "category": "general",
+      "url": "https://pypi.org/project/pyarabic/",
+      "docs": "https://pyarabic.readthedocs.io",
+      "repo": "https://github.com/linuxscout/pyarabic",
+      "license": "GPL-2.0",
+      "languages": [
+        "ar"
+      ],
+      "format": "pip",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "arabic",
+        "nlp",
+        "tashkeel",
+        "tokenization",
+        "normalization",
+        "python",
+        "preprocessing"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Taha Zerrouki"
+    },
+    {
+      "id": "pyislam",
+      "name": "pyIslam",
+      "description": "Comprehensive Python library covering prayer times, Hijri date conversion, Qibla direction, zakat calculation, and inheritance (mirath) calculation — all in one offline package.",
+      "category": "prayer-times",
+      "url": "https://pypi.org/project/islam/",
+      "repo": "https://github.com/abougouffa/pyIslam",
+      "license": "GPL-3.0",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "format": "pip",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "prayer-times",
+        "hijri",
+        "qibla",
+        "zakat",
+        "mirath",
+        "python",
+        "offline"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Abdelhak Bougouffa"
+    },
+    {
+      "id": "fawaz-quran-api",
+      "name": "Quran CDN API (fawazahmed0)",
+      "description": "Free, no-rate-limit Quran API served via jsDelivr CDN. Covers 90+ languages and 440+ translations as static JSON files. No server, no auth, no sign-up — just fetch a URL.",
+      "category": "quran",
+      "subcategory": "text",
+      "url": "https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1",
+      "docs": "https://github.com/fawazahmed0/quran-api/blob/1/README.md",
+      "repo": "https://github.com/fawazahmed0/quran-api",
+      "license": "Unlicense",
+      "languages": [
+        "ar",
+        "en",
+        "ur",
+        "bn",
+        "tr",
+        "id",
+        "fr",
+        "ru",
+        "zh",
+        "es",
+        "de",
+        "fa"
+      ],
+      "format": "json",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "quran",
+        "translation",
+        "cdn",
+        "no-auth",
+        "multilingual",
+        "440-translations"
+      ],
+      "added": "2026-06-14",
+      "attribution": "fawazahmed0"
+    },
+    {
+      "id": "quranjs-api",
+      "name": "Quran Foundation SDK (@quranjs/api)",
+      "description": "Official TypeScript/JavaScript SDK for the Quran Foundation API (quran.com). Provides typed access to verses, chapters, translations, tafsir, audio recitations, and search — the most complete Quran API available.",
+      "category": "quran",
+      "subcategory": "text",
+      "url": "https://www.npmjs.com/package/@quranjs/api",
+      "docs": "https://api-docs.quran.foundation",
+      "repo": "https://github.com/quran/api-js",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en",
+        "ur",
+        "fr",
+        "de",
+        "tr",
+        "id",
+        "bn",
+        "ru"
+      ],
+      "format": "npm",
+      "free": true,
+      "auth_required": true,
+      "scholar_reviewed": true,
+      "maintained": true,
+      "tags": [
+        "quran",
+        "translation",
+        "tafsir",
+        "audio",
+        "search",
+        "typescript",
+        "sdk"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Quran Foundation"
+    },
+    {
+      "id": "quran-json",
+      "name": "quran-json (npm)",
+      "description": "npm package providing the complete Quran as structured JSON with surah metadata, verse text in Arabic, transliteration, and translations in 10+ languages. Zero dependencies, works in browser and Node.js.",
+      "category": "quran",
+      "subcategory": "text",
+      "url": "https://www.npmjs.com/package/quran-json",
+      "repo": "https://github.com/risan/quran-json",
+      "license": "CC-BY-4.0",
+      "languages": [
+        "ar",
+        "en",
+        "bn",
+        "zh",
+        "fr",
+        "id",
+        "ru",
+        "es",
+        "sv",
+        "tr",
+        "ur"
+      ],
+      "format": "npm",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": false,
+      "tags": [
+        "quran",
+        "translation",
+        "npm",
+        "offline",
+        "transliteration"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Risan Bagja Putra"
     },
     {
       "id": "quran-com",
@@ -373,6 +909,32 @@
       "attribution": "Tarteel AI"
     },
     {
+      "id": "salah-rs",
+      "name": "Salah (Rust)",
+      "description": "Rust crate for Islamic prayer time calculation using the Jean Meeus astronomical algorithms. Available on crates.io as 'salah'. Suitable for server-side, embedded, and WebAssembly targets.",
+      "category": "prayer-times",
+      "url": "https://crates.io/crates/salah",
+      "repo": "https://github.com/insha/salah",
+      "license": "MIT",
+      "languages": [
+        "ar"
+      ],
+      "format": "cargo",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "prayer-times",
+        "rust",
+        "wasm",
+        "offline",
+        "embedded"
+      ],
+      "added": "2026-06-14",
+      "attribution": "insha"
+    },
+    {
       "id": "sunnah-com",
       "name": "Sunnah.com API",
       "description": "REST API for the major hadith collections (Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah, Malik, Ahmad, Darimi) with Arabic text and English translations.",
@@ -399,6 +961,66 @@
       ],
       "added": "2026-06-14",
       "attribution": "Sunnah.com"
+    },
+    {
+      "id": "tafseer-api",
+      "name": "Tafseer API",
+      "description": "Self-hostable Django REST Framework API providing Quran text alongside multiple tafsir sources in Arabic, English, and other languages. Includes search across tafsir content.",
+      "category": "tafsir",
+      "url": "https://github.com/Quran-Tafseer/tafseer_api",
+      "repo": "https://github.com/Quran-Tafseer/tafseer_api",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en",
+        "ur"
+      ],
+      "format": "rest-api",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "tafsir",
+        "self-hosted",
+        "django",
+        "search",
+        "exegesis"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Quran-Tafseer"
+    },
+    {
+      "id": "tafsir-cdn-api",
+      "name": "Tafsir CDN API (spa5k)",
+      "description": "Free, no-rate-limit tafsir API serving 122 tafsirs via jsDelivr CDN as static JSON. Covers classical and contemporary exegesis in Arabic, English, Urdu, and other languages. No server or auth required.",
+      "category": "tafsir",
+      "url": "https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/",
+      "docs": "https://github.com/spa5k/tafsir_api",
+      "repo": "https://github.com/spa5k/tafsir_api",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en",
+        "ur",
+        "tr",
+        "id",
+        "fr"
+      ],
+      "format": "json",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "tafsir",
+        "cdn",
+        "no-auth",
+        "122-tafsirs",
+        "exegesis"
+      ],
+      "added": "2026-06-14",
+      "attribution": "spa5k"
     },
     {
       "id": "tanzil",

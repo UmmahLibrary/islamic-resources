@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "pyislam",
+  "name": "pyIslam",
+  "description": "Comprehensive Python library covering prayer times, Hijri date conversion, Qibla direction, zakat calculation, and inheritance (mirath) calculation — all in one offline package.",
+  "category": "prayer-times",
+  "url": "https://pypi.org/project/islam/",
+  "repo": "https://github.com/abougouffa/pyIslam",
+  "license": "GPL-3.0",
+  "languages": ["ar", "en"],
+  "format": "pip",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["prayer-times", "hijri", "qibla", "zakat", "mirath", "python", "offline"],
+  "added": "2026-06-14",
+  "attribution": "Abdelhak Bougouffa"
+}

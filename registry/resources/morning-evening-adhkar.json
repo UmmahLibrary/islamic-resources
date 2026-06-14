@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "morning-evening-adhkar",
+  "name": "Morning & Evening Adhkar DB",
+  "description": "Structured dataset of morning and evening adhkar (remembrances) from authentic Sunnah sources, available in JSON, CSV, SQL, and SQLite formats. All formats are auto-generated from a single primary JSON source via GitHub Actions.",
+  "category": "duas",
+  "url": "https://github.com/Seen-Arabic/Morning-And-Evening-Adhkar-DB",
+  "repo": "https://github.com/Seen-Arabic/Morning-And-Evening-Adhkar-DB",
+  "license": "MIT",
+  "languages": ["ar", "en"],
+  "format": "json",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["adhkar", "dhikr", "morning", "evening", "sunnah", "dataset", "offline"],
+  "added": "2026-06-14",
+  "attribution": "Seen Arabic"
+}

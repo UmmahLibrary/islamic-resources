@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "quran-json",
+  "name": "quran-json (npm)",
+  "description": "npm package providing the complete Quran as structured JSON with surah metadata, verse text in Arabic, transliteration, and translations in 10+ languages. Zero dependencies, works in browser and Node.js.",
+  "category": "quran",
+  "subcategory": "text",
+  "url": "https://www.npmjs.com/package/quran-json",
+  "repo": "https://github.com/risan/quran-json",
+  "license": "CC-BY-4.0",
+  "languages": ["ar", "en", "bn", "zh", "fr", "id", "ru", "es", "sv", "tr", "ur"],
+  "format": "npm",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": false,
+  "tags": ["quran", "translation", "npm", "offline", "transliteration"],
+  "added": "2026-06-14",
+  "attribution": "Risan Bagja Putra"
+}

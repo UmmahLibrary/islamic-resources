@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "tafseer-api",
+  "name": "Tafseer API",
+  "description": "Self-hostable Django REST Framework API providing Quran text alongside multiple tafsir sources in Arabic, English, and other languages. Includes search across tafsir content.",
+  "category": "tafsir",
+  "url": "https://github.com/Quran-Tafseer/tafseer_api",
+  "repo": "https://github.com/Quran-Tafseer/tafseer_api",
+  "license": "MIT",
+  "languages": ["ar", "en", "ur"],
+  "format": "rest-api",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["tafsir", "self-hosted", "django", "search", "exegesis"],
+  "added": "2026-06-14",
+  "attribution": "Quran-Tafseer"
+}

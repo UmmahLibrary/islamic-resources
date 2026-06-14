@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "open-hadith-data",
+  "name": "Open Hadith Data",
+  "description": "Arabic-only hadith dataset in CSV format covering the nine primary collections (Kutub al-Tis'ah): Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah, Muwatta Malik, Musnad Ahmad, and Darimi. Includes both with and without tashkeel (diacritics) variants.",
+  "category": "hadith",
+  "url": "https://github.com/mhashim6/Open-Hadith-Data",
+  "repo": "https://github.com/mhashim6/Open-Hadith-Data",
+  "license": "MIT",
+  "languages": ["ar"],
+  "format": "csv",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": false,
+  "tags": ["hadith", "arabic", "kutub-tis'ah", "tashkeel", "dataset", "nlp", "offline"],
+  "added": "2026-06-14",
+  "attribution": "mhashim6"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "mp3quran-api",
+  "name": "MP3Quran API",
+  "description": "Free REST API for Quran audio recitations. Provides reciters list, surah MP3 direct URLs, rewayat (reading styles), radio streams, and tafsir audio. No auth required, widely used for streaming Quran audio in apps.",
+  "category": "quran",
+  "subcategory": "audio",
+  "url": "https://www.mp3quran.net/eng/api",
+  "docs": "https://www.mp3quran.net/eng/api",
+  "repo": "https://github.com/MP3Quran/apis",
+  "license": "Free to use",
+  "languages": ["ar"],
+  "format": "rest-api",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["quran", "audio", "recitation", "mp3", "streaming", "reciters"],
+  "added": "2026-06-14",
+  "attribution": "MP3Quran.net"
+}

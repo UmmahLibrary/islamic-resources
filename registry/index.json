@@ -111,6 +111,68 @@
       "attribution": "islamic-network"
     },
     {
+      "id": "dorar-hadith-api",
+      "name": "Dorar Hadith API",
+      "description": "REST API proxy for Dorar al-Sunnah (dorar.net), the leading Arabic platform for hadith grading and authenticity research. Provides access to graded hadiths in Arabic with full chain-of-narration (isnad) data.",
+      "category": "hadith",
+      "url": "https://dorar.net/hadith",
+      "docs": "https://github.com/AhmedElTabarani/dorar-hadith-api",
+      "repo": "https://github.com/AhmedElTabarani/dorar-hadith-api",
+      "license": "MIT",
+      "languages": [
+        "ar"
+      ],
+      "format": "rest-api",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": true,
+      "tags": [
+        "hadith",
+        "arabic",
+        "grading",
+        "isnad",
+        "authenticity",
+        "dorar"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Dorar al-Sunnah / AhmedElTabarani"
+    },
+    {
+      "id": "globalquran",
+      "name": "GlobalQuran API",
+      "description": "Open-source Quran platform providing REST API access to Quran text in multiple translations, audio recitations, and downloadable datasets. Dedicated to making the Quran accessible to every developer.",
+      "category": "quran",
+      "subcategory": "text",
+      "url": "https://globalquran.com",
+      "docs": "https://globalquran.com/api/",
+      "repo": "https://github.com/GlobalQuran/docs",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en",
+        "ur",
+        "fr",
+        "de",
+        "tr",
+        "id"
+      ],
+      "format": "rest-api",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": true,
+      "tags": [
+        "quran",
+        "translation",
+        "audio",
+        "recitation",
+        "dataset"
+      ],
+      "added": "2026-06-14",
+      "attribution": "GlobalQuran"
+    },
+    {
       "id": "hadith-api",
       "name": "Hadith API",
       "description": "REST API providing access to major hadith collections: Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah, Malik, and Riyadh al-Salihin.",
@@ -136,6 +198,75 @@
       ],
       "added": "2026-06-14",
       "attribution": "HadithAPI.com"
+    },
+    {
+      "id": "hadith-cdn-api",
+      "name": "Hadith CDN API (fawazahmed0)",
+      "description": "Free, no-rate-limit Hadith API served via jsDelivr CDN. Covers 17+ collections (Bukhari, Muslim, Tirmidhi, and more) in 15+ languages with authentic grading per hadith. No API key, no sign-up.",
+      "category": "hadith",
+      "url": "https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1",
+      "docs": "https://github.com/fawazahmed0/hadith-api/blob/1/README.md",
+      "repo": "https://github.com/fawazahmed0/hadith-api",
+      "license": "Unlicense",
+      "languages": [
+        "ar",
+        "en",
+        "ur",
+        "bn",
+        "tr",
+        "id",
+        "fr",
+        "ru"
+      ],
+      "format": "json",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "hadith",
+        "bukhari",
+        "muslim",
+        "grading",
+        "multilingual",
+        "cdn",
+        "no-auth"
+      ],
+      "added": "2026-06-14",
+      "attribution": "fawazahmed0"
+    },
+    {
+      "id": "muslim-data",
+      "name": "Muslim Data",
+      "description": "Offline-capable mobile library (Android, iOS, Flutter) providing prayer times, Azkars (Hisnul Muslim), 99 Names of Allah with translations, and an offline geocoder. All data works without an internet connection.",
+      "category": "general",
+      "url": "https://kosrat.dev/posts/muslim-data/",
+      "repo": "https://github.com/my-prayers/muslim-data-android",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en",
+        "ku",
+        "de",
+        "ru"
+      ],
+      "format": "sqlite",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": true,
+      "tags": [
+        "prayer-times",
+        "azkars",
+        "hisnul-muslim",
+        "names-of-allah",
+        "offline",
+        "android",
+        "ios",
+        "flutter"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Kosrat D. Ahmad (my-prayers)"
     },
     {
       "id": "quran-com",
@@ -171,6 +302,75 @@
       ],
       "added": "2026-06-14",
       "attribution": "Quran.com"
+    },
+    {
+      "id": "quran-arabic-corpus",
+      "name": "Quranic Arabic Corpus",
+      "description": "Annotated linguistic dataset from the University of Leeds providing word-by-word Arabic grammar, morphology, and syntax for every word in the Quran. Includes part-of-speech tags, roots, lemmas, and syntactic treebank data. The gold standard for Quranic NLP.",
+      "category": "quran",
+      "subcategory": "morphology",
+      "url": "https://corpus.quran.com",
+      "docs": "https://corpus.quran.com/download/",
+      "license": "GPL-3.0",
+      "languages": [
+        "ar"
+      ],
+      "format": "csv",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": false,
+      "tags": [
+        "quran",
+        "morphology",
+        "grammar",
+        "syntax",
+        "word-by-word",
+        "nlp",
+        "arabic",
+        "dataset"
+      ],
+      "added": "2026-06-14",
+      "attribution": "University of Leeds"
+    },
+    {
+      "id": "quranic-universal-library",
+      "name": "Quranic Universal Library (QUL)",
+      "description": "Comprehensive open-source Quran data hub by Tarteel AI. Provides Quran text, 90+ translations, tafsir, recitation audio with word-by-word timestamps, Mushaf page layouts, morphology, and grammar — all in downloadable JSON format.",
+      "category": "quran",
+      "subcategory": "dataset",
+      "url": "https://qul.tarteel.ai",
+      "docs": "https://qul.tarteel.ai/faq",
+      "repo": "https://github.com/TarteelAI/quranic-universal-library",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en",
+        "ur",
+        "tr",
+        "fr",
+        "de",
+        "id",
+        "bn",
+        "ru"
+      ],
+      "format": "json",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": true,
+      "maintained": true,
+      "tags": [
+        "quran",
+        "translation",
+        "tafsir",
+        "audio",
+        "morphology",
+        "timestamps",
+        "mushaf",
+        "dataset"
+      ],
+      "added": "2026-06-14",
+      "attribution": "Tarteel AI"
     },
     {
       "id": "sunnah-com",

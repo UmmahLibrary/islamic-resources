@@ -1,0 +1,21 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "globalquran",
+  "name": "GlobalQuran API",
+  "description": "Open-source Quran platform providing REST API access to Quran text in multiple translations, audio recitations, and downloadable datasets. Dedicated to making the Quran accessible to every developer.",
+  "category": "quran",
+  "subcategory": "text",
+  "url": "https://globalquran.com",
+  "docs": "https://globalquran.com/api/",
+  "repo": "https://github.com/GlobalQuran/docs",
+  "license": "MIT",
+  "languages": ["ar", "en", "ur", "fr", "de", "tr", "id"],
+  "format": "rest-api",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["quran", "translation", "audio", "recitation", "dataset"],
+  "added": "2026-06-14",
+  "attribution": "GlobalQuran"
+}

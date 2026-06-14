@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "dorar-hadith-api",
+  "name": "Dorar Hadith API",
+  "description": "REST API proxy for Dorar al-Sunnah (dorar.net), the leading Arabic platform for hadith grading and authenticity research. Provides access to graded hadiths in Arabic with full chain-of-narration (isnad) data.",
+  "category": "hadith",
+  "url": "https://dorar.net/hadith",
+  "docs": "https://github.com/AhmedElTabarani/dorar-hadith-api",
+  "repo": "https://github.com/AhmedElTabarani/dorar-hadith-api",
+  "license": "MIT",
+  "languages": ["ar"],
+  "format": "rest-api",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["hadith", "arabic", "grading", "isnad", "authenticity", "dorar"],
+  "added": "2026-06-14",
+  "attribution": "Dorar al-Sunnah / AhmedElTabarani"
+}

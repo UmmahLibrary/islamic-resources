@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "muslim-data",
+  "name": "Muslim Data",
+  "description": "Offline-capable mobile library (Android, iOS, Flutter) providing prayer times, Azkars (Hisnul Muslim), 99 Names of Allah with translations, and an offline geocoder. All data works without an internet connection.",
+  "category": "general",
+  "url": "https://kosrat.dev/posts/muslim-data/",
+  "repo": "https://github.com/my-prayers/muslim-data-android",
+  "license": "MIT",
+  "languages": ["ar", "en", "ku", "de", "ru"],
+  "format": "sqlite",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["prayer-times", "azkars", "hisnul-muslim", "names-of-allah", "offline", "android", "ios", "flutter"],
+  "added": "2026-06-14",
+  "attribution": "Kosrat D. Ahmad (my-prayers)"
+}

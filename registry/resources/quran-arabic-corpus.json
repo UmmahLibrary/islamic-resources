@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "quran-arabic-corpus",
+  "name": "Quranic Arabic Corpus",
+  "description": "Annotated linguistic dataset from the University of Leeds providing word-by-word Arabic grammar, morphology, and syntax for every word in the Quran. Includes part-of-speech tags, roots, lemmas, and syntactic treebank data. The gold standard for Quranic NLP.",
+  "category": "quran",
+  "subcategory": "morphology",
+  "url": "https://corpus.quran.com",
+  "docs": "https://corpus.quran.com/download/",
+  "license": "GPL-3.0",
+  "languages": ["ar"],
+  "format": "csv",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": false,
+  "tags": ["quran", "morphology", "grammar", "syntax", "word-by-word", "nlp", "arabic", "dataset"],
+  "added": "2026-06-14",
+  "attribution": "University of Leeds"
+}

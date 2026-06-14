@@ -1,0 +1,21 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "quranic-universal-library",
+  "name": "Quranic Universal Library (QUL)",
+  "description": "Comprehensive open-source Quran data hub by Tarteel AI. Provides Quran text, 90+ translations, tafsir, recitation audio with word-by-word timestamps, Mushaf page layouts, morphology, and grammar — all in downloadable JSON format.",
+  "category": "quran",
+  "subcategory": "dataset",
+  "url": "https://qul.tarteel.ai",
+  "docs": "https://qul.tarteel.ai/faq",
+  "repo": "https://github.com/TarteelAI/quranic-universal-library",
+  "license": "MIT",
+  "languages": ["ar", "en", "ur", "tr", "fr", "de", "id", "bn", "ru"],
+  "format": "json",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["quran", "translation", "tafsir", "audio", "morphology", "timestamps", "mushaf", "dataset"],
+  "added": "2026-06-14",
+  "attribution": "Tarteel AI"
+}

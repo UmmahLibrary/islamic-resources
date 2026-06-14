@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import registry from '../../../../registry/index.json';
+import type { Resource } from '@islamic-resources/adapters';
+
+export function getStaticPaths() {
+  return registry.resources.map(r => ({
+    params: { id: r.id },
+    props: { resource: r as Resource },
+  }));
+}
+
+interface Props { resource: Resource; }
+const { resource } = Astro.props;
+---
+
+<Base title={resource.name} description={resource.description}>
+  <a href="/" class="back">← All resources</a>
+
+  <article>
+    <header>
+      <div class="badges">
+        <span class="category">{resource.category}</span>
+        {resource.scholar_reviewed && <span class="badge scholar">Scholar reviewed</span>}
+        {!resource.maintained && <span class="badge unmaintained">Unmaintained</span>}
+      </div>
+      <h1>{resource.name}</h1>
+      <p class="desc">{resource.description}</p>
+    </header>
+
+    <dl>
+      <dt>License</dt>      <dd>{resource.license}</dd>
+      <dt>Format</dt>       <dd>{resource.format}</dd>
+      <dt>Languages</dt>    <dd>{resource.languages.join(', ')}</dd>
+      <dt>Free</dt>         <dd>{resource.free ? 'Yes' : 'No'}</dd>
+      <dt>Auth required</dt><dd>{resource.auth_required ? 'Yes' : 'No'}</dd>
+      <dt>Maintained</dt>   <dd>{resource.maintained ? 'Yes' : 'No'}</dd>
+      {resource.attribution && <><dt>Attribution</dt><dd>{resource.attribution}</dd></>}
+      <dt>Added</dt>        <dd>{resource.added}</dd>
+    </dl>
+
+    <div class="links">
+      <a href={resource.url} target="_blank" rel="noopener noreferrer">Website ↗</a>
+      {resource.docs && (
+        <a href={resource.docs} target="_blank" rel="noopener noreferrer">Docs ↗</a>
+      )}
+      {resource.repo && (
+        <a href={resource.repo} target="_blank" rel="noopener noreferrer">Repository ↗</a>
+      )}
+    </div>
+
+    {resource.tags.length > 0 && (
+      <div class="tags">
+        {resource.tags.map(t => <span>{t}</span>)}
+      </div>
+    )}
+  </article>
+</Base>
+
+<style>
+  .back { display: inline-block; margin-bottom: 1.5rem; color: #78716c; font-size: 0.875rem; }
+  article header { margin-bottom: 1.5rem; }
+  .badges { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+  .category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #f5f5f4;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-transform: capitalize;
+  }
+  .badge { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 4px; }
+  .badge.scholar { background: #fef9c3; color: #854d0e; }
+  .badge.unmaintained { background: #fee2e2; color: #991b1b; }
+  h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .desc { color: #57534e; max-width: 640px; }
+  dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+  }
+  dt { font-weight: 600; color: #57534e; }
+  .links { display: flex; gap: 0.75rem; margin: 1.5rem 0; flex-wrap: wrap; }
+  .links a {
+    padding: 0.45rem 0.9rem;
+    border: 1px solid #e7e5e4;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    transition: background 0.1s;
+  }
+  .links a:hover { background: #f5f5f4; text-decoration: none; }
+  .tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; }
+  .tags span {
+    font-size: 0.75rem;
+    background: #f5f5f4;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #78716c;
+  }
+</style>

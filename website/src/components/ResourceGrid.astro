@@ -1,0 +1,98 @@
+---
+import type { Resource } from '@islamic-resources/adapters';
+import ResourceCard from './ResourceCard.astro';
+
+interface Props {
+  resources: Resource[];
+}
+const { resources } = Astro.props;
+
+const categories = ['all', ...Array.from(new Set(resources.map(r => r.category))).sort()];
+---
+
+<div>
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Search by name or tag…" autocomplete="off" />
+    <div class="filters" role="group" aria-label="Filter by category">
+      {categories.map(c => (
+        <button class="filter-btn" data-category={c}>{c === 'all' ? 'All' : c}</button>
+      ))}
+    </div>
+  </div>
+
+  <div class="grid" id="grid">
+    {resources.map(r => (
+      <div
+        class="grid-item"
+        data-category={r.category}
+        data-search={`${r.name} ${r.tags.join(' ')} ${r.description}`.toLowerCase()}
+      >
+        <ResourceCard resource={r} />
+      </div>
+    ))}
+  </div>
+
+  <p id="empty" style="display:none; color:#78716c; text-align:center; padding:3rem 0;">
+    No resources match your search.
+  </p>
+</div>
+
+<script>
+  const search = document.getElementById('search') as HTMLInputElement;
+  const grid = document.getElementById('grid')!;
+  const empty = document.getElementById('empty')!;
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  let activeCategory = 'all';
+
+  function filter() {
+    const q = search.value.toLowerCase().trim();
+    const items = grid.querySelectorAll<HTMLElement>('.grid-item');
+    let visible = 0;
+    items.forEach(item => {
+      const matchCat = activeCategory === 'all' || item.dataset.category === activeCategory;
+      const matchQ = !q || item.dataset.search!.includes(q);
+      item.style.display = matchCat && matchQ ? '' : 'none';
+      if (matchCat && matchQ) visible++;
+    });
+    empty.style.display = visible === 0 ? '' : 'none';
+  }
+
+  search.addEventListener('input', filter);
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.dataset.category!;
+      buttons.forEach(b => b.classList.toggle('active', b === btn));
+      filter();
+    });
+  });
+  buttons[0]?.classList.add('active');
+</script>
+
+<style>
+  .toolbar { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
+  #search {
+    padding: 0.6rem 1rem;
+    border: 1px solid #e7e5e4;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 420px;
+  }
+  .filters { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .filter-btn {
+    padding: 0.3rem 0.75rem;
+    border: 1px solid #e7e5e4;
+    border-radius: 20px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    transition: background 0.1s, color 0.1s;
+  }
+  .filter-btn.active { background: #166534; color: #fff; border-color: #166534; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+</style>

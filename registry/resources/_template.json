@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "your-resource-id",
+  "name": "Resource Name",
+  "description": "A clear, one-paragraph description of what this resource provides and who it is for.",
+  "category": "quran",
+  "url": "https://example.com",
+  "license": "MIT",
+  "languages": ["ar"],
+  "format": "rest-api",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": [],
+  "added": "YYYY-MM-DD",
+  "attribution": "Author or organization name"
+}

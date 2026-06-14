@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "adhan-js",
+  "name": "Adhan.js",
+  "description": "High-precision prayer time calculation library for JavaScript and TypeScript. Supports MWL, ISNA, Egypt, Makkah, Karachi, Tehran, and Jafari calculation methods.",
+  "category": "prayer-times",
+  "url": "https://www.npmjs.com/package/adhan",
+  "repo": "https://github.com/batoulapps/adhan-js",
+  "license": "MIT",
+  "languages": ["ar"],
+  "format": "npm",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": ["prayer-times", "adhan", "calculation", "typescript", "offline"],
+  "added": "2026-06-14",
+  "attribution": "Batoul Apps"
+}

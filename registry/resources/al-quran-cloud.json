@@ -1,0 +1,21 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "al-quran-cloud",
+  "name": "AlQuran Cloud API",
+  "description": "Open-source REST API for Quran text and audio in multiple editions and translations. Backed by the Islamic Network organization.",
+  "category": "quran",
+  "subcategory": "text",
+  "url": "https://alquran.cloud",
+  "docs": "https://alquran.cloud/api",
+  "repo": "https://github.com/islamic-network/alquran.cloud",
+  "license": "MIT",
+  "languages": ["ar", "en", "ur", "tr", "id"],
+  "format": "rest-api",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": true,
+  "maintained": true,
+  "tags": ["quran", "translation", "audio"],
+  "added": "2026-06-14",
+  "attribution": "islamic-network"
+}

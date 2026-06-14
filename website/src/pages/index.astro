@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import ResourceGrid from '../components/ResourceGrid.astro';
+import registry from '../../../registry/index.json';
+import type { Resource } from '@islamic-resources/adapters';
+
+const resources = registry.resources as Resource[];
+---
+
+<Base title="Home">
+  <div class="hero">
+    <h2>Islamic Resources Registry</h2>
+    <p>
+      A curated directory of open-source Islamic data sets, APIs, and libraries.
+      Machine-readable JSON — human-browsable here.
+    </p>
+    <div class="stats">
+      <span>{resources.length} resources</span>
+      <a href="https://github.com/rashidmya/islamic-resources/blob/main/CONTRIBUTING.md">
+        Add a resource →
+      </a>
+    </div>
+  </div>
+
+  <ResourceGrid resources={resources} />
+</Base>
+
+<style>
+  .hero { margin-bottom: 2rem; }
+  .hero h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .hero p { color: #57534e; max-width: 600px; }
+  .stats {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: #78716c;
+  }
+</style>

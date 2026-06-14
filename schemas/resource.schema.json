@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "resource.schema.json",
+  "title": "Islamic Resource",
+  "type": "object",
+  "required": ["id", "name", "description", "category", "url", "license", "languages", "format", "free", "auth_required", "scholar_reviewed", "maintained", "tags", "added"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique kebab-case identifier, matches the filename"
+    },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "category": {
+      "type": "string",
+      "enum": ["quran", "hadith", "prayer-times", "tafsir", "duas", "calendar", "names", "general"]
+    },
+    "subcategory": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "docs": { "type": "string", "format": "uri" },
+    "repo": { "type": "string", "format": "uri" },
+    "license": { "type": "string" },
+    "languages": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "format": {
+      "type": "string",
+      "enum": ["rest-api", "npm", "json", "xml", "csv", "graphql", "sqlite"]
+    },
+    "free": { "type": "boolean" },
+    "auth_required": { "type": "boolean" },
+    "scholar_reviewed": { "type": "boolean" },
+    "maintained": { "type": "boolean" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "adapter": {
+      "type": "string",
+      "description": "npm import path for the adapter, e.g. @islamic-resources/adapters/quran-com"
+    },
+    "added": { "type": "string", "format": "date" },
+    "attribution": { "type": "string" }
+  }
+}

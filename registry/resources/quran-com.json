@@ -6,16 +6,31 @@
   "category": "quran",
   "subcategory": "text",
   "url": "https://api.quran.com",
-  "docs": "https://api.quran.com/documentation/v4",
-  "repo": "https://github.com/quran/quran.com-api",
+  "docs": "https://api-docs.quran.com",
   "license": "MIT",
-  "languages": ["ar", "en", "ur", "fr", "de", "tr", "id", "bn"],
+  "languages": [
+    "ar",
+    "en",
+    "ur",
+    "fr",
+    "de",
+    "tr",
+    "id",
+    "bn"
+  ],
   "format": "rest-api",
   "free": true,
   "auth_required": false,
   "scholar_reviewed": true,
   "maintained": true,
-  "tags": ["quran", "translation", "audio", "tafsir", "recitation"],
+  "tags": [
+    "quran",
+    "translation",
+    "audio",
+    "tafsir",
+    "recitation"
+  ],
   "added": "2026-06-14",
-  "attribution": "Quran.com"
+  "attribution": "Quran.com",
+  "endpoint": "https://api.quran.com/api/v4/chapters/1?language=en"
 }

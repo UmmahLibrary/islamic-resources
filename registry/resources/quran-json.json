@@ -8,13 +8,32 @@
   "url": "https://www.npmjs.com/package/quran-json",
   "repo": "https://github.com/risan/quran-json",
   "license": "CC-BY-4.0",
-  "languages": ["ar", "en", "bn", "zh", "fr", "id", "ru", "es", "sv", "tr", "ur"],
+  "languages": [
+    "ar",
+    "en",
+    "bn",
+    "zh",
+    "fr",
+    "id",
+    "ru",
+    "es",
+    "sv",
+    "tr",
+    "ur"
+  ],
   "format": "npm",
   "free": true,
   "auth_required": false,
   "scholar_reviewed": false,
   "maintained": false,
-  "tags": ["quran", "translation", "npm", "offline", "transliteration"],
+  "tags": [
+    "quran",
+    "translation",
+    "npm",
+    "offline",
+    "transliteration"
+  ],
   "added": "2026-06-14",
-  "attribution": "Risan Bagja Putra"
+  "attribution": "Risan Bagja Putra",
+  "package": "quran-json"
 }

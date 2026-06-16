@@ -1,98 +1,341 @@
 ---
 import type { Resource } from '@islamic-resources/adapters';
 import ResourceCard from './ResourceCard.astro';
+import { CATEGORIES, catLabel, ICONS } from '../lib/ui';
 
 interface Props {
   resources: Resource[];
+  scopedCategory?: string;
 }
-const { resources } = Astro.props;
+const { resources, scopedCategory } = Astro.props;
 
-const categories = ['all', ...Array.from(new Set(resources.map(r => r.category))).sort()];
+const FORMAT_ORDER = ['rest-api', 'graphql', 'npm', 'pip', 'swift', 'maven', 'cargo', 'pub', 'json', 'xml', 'csv', 'sqlite'];
+
+const showCategoryFacet = !scopedCategory;
+const categoryOptions = CATEGORIES
+  .filter((c) => resources.some((r) => r.category === c.key))
+  .map((c) => ({ value: c.key, label: c.label, count: resources.filter((r) => r.category === c.key).length }));
+
+const formatOptions = FORMAT_ORDER
+  .filter((fmt) => resources.some((r) => r.format === fmt))
+  .map((fmt) => ({ value: fmt, label: fmt, count: resources.filter((r) => r.format === fmt).length }));
+
+const licenseOptions = Array.from(new Set(resources.map((r) => r.license)))
+  .sort()
+  .map((lic) => ({ value: lic, label: lic, count: resources.filter((r) => r.license === lic).length }));
+
+const statusOptions = [
+  { value: 'free', label: 'Free', cls: 'ok', count: resources.filter((r) => r.free).length },
+  { value: 'auth', label: 'Auth required', cls: 'warn', count: resources.filter((r) => r.auth_required).length },
+  { value: 'maintained', label: 'Maintained', cls: 'ok', count: resources.filter((r) => r.maintained).length },
+  { value: 'scholar', label: 'Scholar-reviewed', cls: 'gold', count: resources.filter((r) => r.scholar_reviewed).length },
+];
+const total = resources.length;
 ---
 
-<div>
-  <div class="toolbar">
-    <input type="search" id="search" placeholder="Search by name or tag…" autocomplete="off" />
-    <div class="filters" role="group" aria-label="Filter by category">
-      {categories.map(c => (
-        <button class="filter-btn" data-category={c}>{c === 'all' ? 'All' : c}</button>
+<section class="noor-layout" data-scope={scopedCategory ?? ''}>
+  <aside class="noor-rail">
+    {scopedCategory && (
+      <div class="viewing">
+        <div class="viewing-label">Viewing category</div>
+        <div class="viewing-row">
+          <span class="viewing-name">{catLabel(scopedCategory)}</span>
+          <a class="viewing-all" href="/">View all</a>
+        </div>
+      </div>
+    )}
+
+    {showCategoryFacet && (
+      <div class="facet">
+        <div class="facet-title">Category</div>
+        {categoryOptions.map((o) => (
+          <button class="facet-opt" data-type="cats" data-value={o.value}>
+            <span class="box"><span class="check" set:html={ICONS.check} /></span>
+            <span class="opt-label">{o.label}</span>
+            <span class="opt-count">{o.count}</span>
+          </button>
+        ))}
+      </div>
+    )}
+
+    <div class="facet">
+      <div class="facet-title">Format</div>
+      {formatOptions.map((o) => (
+        <button class="facet-opt" data-type="formats" data-value={o.value}>
+          <span class="box"><span class="check" set:html={ICONS.check} /></span>
+          <span class="opt-label mono">{o.label}</span>
+          <span class="opt-count">{o.count}</span>
+        </button>
+      ))}
+    </div>
+
+    <div class="facet">
+      <div class="facet-title">License</div>
+      {licenseOptions.map((o) => (
+        <button class="facet-opt" data-type="licenses" data-value={o.value}>
+          <span class="box"><span class="check" set:html={ICONS.check} /></span>
+          <span class="opt-label">{o.label}</span>
+          <span class="opt-count">{o.count}</span>
+        </button>
+      ))}
+    </div>
+
+    <div class="facet">
+      <div class="facet-title">Status</div>
+      {statusOptions.map((o) => (
+        <button class="facet-opt" data-type="flags" data-value={o.value}>
+          <span class="box"><span class="check" set:html={ICONS.check} /></span>
+          <span class="opt-label">{o.label}</span>
+          <span class="opt-count">{o.count}</span>
+        </button>
+      ))}
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="bar">
+      <span class="count"><strong id="result-count">{total}</strong> <span id="result-word">{total === 1 ? 'result' : 'results'}</span></span>
+      <div style="flex:1"></div>
+      <label class="sort">Sort
+        <select id="sort-select">
+          <option value="newest">Newest</option>
+          <option value="name">Name A–Z</option>
+          <option value="category">Category</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="active-chips" class="chips" hidden></div>
+
+    <div id="empty" class="empty" hidden>
+      <div class="empty-star" set:html={ICONS.bigStar} />
+      <h3>No matching resources</h3>
+      <p>Try removing a filter or searching for something broader.</p>
+      <button class="empty-clear" data-clear>Clear all filters</button>
+    </div>
+
+    <div id="grid" class="grid">
+      {resources.map((r) => (
+        <div
+          class="grid-item"
+          data-category={r.category}
+          data-cat-label={catLabel(r.category)}
+          data-format={r.format}
+          data-license={r.license}
+          data-free={r.free ? '1' : '0'}
+          data-auth={r.auth_required ? '1' : '0'}
+          data-maintained={r.maintained ? '1' : '0'}
+          data-scholar={r.scholar_reviewed ? '1' : '0'}
+          data-name={r.name.toLowerCase()}
+          data-date={r.added}
+          data-search={`${r.name} ${r.description} ${r.tags.join(' ')} ${r.attribution ?? ''} ${catLabel(r.category)}`.toLowerCase()}
+        >
+          <ResourceCard resource={r} />
+        </div>
       ))}
     </div>
   </div>
-
-  <div class="grid" id="grid">
-    {resources.map(r => (
-      <div
-        class="grid-item"
-        data-category={r.category}
-        data-search={`${r.name} ${r.tags.join(' ')} ${r.description}`.toLowerCase()}
-      >
-        <ResourceCard resource={r} />
-      </div>
-    ))}
-  </div>
-
-  <p id="empty" style="display:none; color:#78716c; text-align:center; padding:3rem 0;">
-    No resources match your search.
-  </p>
-</div>
-
-<script>
-  const search = document.getElementById('search') as HTMLInputElement;
-  const grid = document.getElementById('grid')!;
-  const empty = document.getElementById('empty')!;
-  const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
-  let activeCategory = 'all';
-
-  function filter() {
-    const q = search.value.toLowerCase().trim();
-    const items = grid.querySelectorAll<HTMLElement>('.grid-item');
-    let visible = 0;
-    items.forEach(item => {
-      const matchCat = activeCategory === 'all' || item.dataset.category === activeCategory;
-      const matchQ = !q || item.dataset.search!.includes(q);
-      item.style.display = matchCat && matchQ ? '' : 'none';
-      if (matchCat && matchQ) visible++;
-    });
-    empty.style.display = visible === 0 ? '' : 'none';
-  }
-
-  search.addEventListener('input', filter);
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      activeCategory = btn.dataset.category!;
-      buttons.forEach(b => b.classList.toggle('active', b === btn));
-      filter();
-    });
-  });
-  buttons[0]?.classList.add('active');
-</script>
+</section>
 
 <style>
-  .toolbar { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
-  #search {
-    padding: 0.6rem 1rem;
-    border: 1px solid #e7e5e4;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    width: 100%;
-    max-width: 420px;
+  .noor-layout {
+    max-width: 1200px; margin: 0 auto; padding: 28px 24px 64px;
+    display: grid; grid-template-columns: 236px 1fr; gap: 30px; align-items: start;
   }
-  .filters { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-  .filter-btn {
-    padding: 0.3rem 0.75rem;
-    border: 1px solid #e7e5e4;
-    border-radius: 20px;
-    background: #fff;
-    cursor: pointer;
-    font-size: 0.8rem;
-    text-transform: capitalize;
-    transition: background 0.1s, color 0.1s;
+  .noor-rail {
+    position: sticky; top: 80px; display: flex; flex-direction: column; gap: 24px;
+    max-height: calc(100vh - 100px); overflow: auto; padding-right: 6px;
   }
-  .filter-btn.active { background: #166534; color: #fff; border-color: #166534; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
+  .viewing { padding: 11px 12px; border-radius: 10px; border: 1px solid var(--noor-border-soft); background: var(--noor-card); }
+  .viewing-label { font-size: 11px; color: var(--noor-faint); margin-bottom: 3px; }
+  .viewing-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .viewing-name { font-size: 14px; font-weight: 600; color: var(--noor-fg); }
+  .viewing-all { font-size: 11.5px; color: var(--noor-gold); }
+  .viewing-all:hover { text-decoration: underline; }
+
+  .facet-title {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.13em;
+    color: var(--noor-faint); font-weight: 600; margin: 0 0 8px; padding: 0 7px;
+  }
+  .facet-opt {
+    display: flex; align-items: center; gap: 9px; width: 100%; padding: 6px 7px;
+    border-radius: 8px; border: none; background: none; cursor: pointer; text-align: left;
+    font-family: inherit;
+  }
+  .facet-opt:hover { background: var(--noor-card-hi); }
+  .facet-opt .box {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 16px; height: 16px; border-radius: 4px; border: 1px solid var(--noor-border);
+    flex: none; background: var(--noor-bg2); color: var(--noor-gold);
+  }
+  .facet-opt .check { display: none; }
+  .facet-opt.active .check { display: inline-flex; }
+  .facet-opt.active .box { border-color: var(--noor-gold-dim); }
+  .opt-label { flex: 1; font-size: 13px; color: var(--noor-fg); }
+  .opt-label.mono { font-size: 12.5px; font-family: var(--mono); }
+  .opt-count { font-size: 11px; color: var(--noor-faint); font-family: var(--mono); }
+
+  .main { min-width: 0; }
+  .bar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .count { font-size: 14px; color: var(--noor-muted); font-weight: 400; }
+  .count strong { color: var(--noor-fg); font-weight: 600; }
+  .sort { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--noor-muted); }
+  .sort select {
+    padding: 7px 10px; border-radius: 8px; border: 1px solid var(--noor-border);
+    background: var(--noor-card); color: var(--noor-fg); font-size: 13px; font-family: inherit; cursor: pointer;
+  }
+
+  .chips { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 999px;
+    border: 1px solid var(--noor-gold-dim); background: var(--noor-gold-soft); color: var(--noor-gold);
+    font-size: 12px; cursor: pointer; font-weight: 500; font-family: inherit;
+  }
+  .chip .x { font-size: 14px; line-height: 1; }
+  .chip-clear {
+    font-size: 12px; color: var(--noor-muted); background: none; border: none; cursor: pointer;
+    text-decoration: underline; text-underline-offset: 3px; font-family: inherit;
+  }
+
+  .empty {
+    text-align: center; padding: 64px 24px; border: 1px dashed var(--noor-border);
+    border-radius: 16px; background: var(--noor-card);
+  }
+  .empty-star { display: inline-flex; color: var(--noor-gold-dim); margin-bottom: 14px; }
+  .empty h3 { margin: 0 0 6px; font-size: 17px; color: var(--noor-fg); }
+  .empty p { margin: 0 0 18px; font-size: 14px; color: var(--noor-muted); }
+  .empty-clear {
+    display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; border-radius: 10px;
+    border: 1px solid var(--noor-border); background: var(--noor-bg2); color: var(--noor-fg);
+    font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;
+  }
+  .empty-clear:hover { border-color: var(--noor-gold-dim); color: var(--noor-gold); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(312px, 1fr)); gap: 16px; }
+  .grid-item[hidden] { display: none; }
+
+  @media (max-width: 880px) {
+    .noor-layout { grid-template-columns: 1fr; }
+    .noor-rail {
+      position: static; max-height: none;
+      border-bottom: 1px solid var(--noor-border-soft); padding-bottom: 20px;
+    }
   }
 </style>
+
+<script>
+  (function () {
+    const section = document.querySelector('.noor-layout') as HTMLElement | null;
+    if (!section) return;
+    const grid = document.getElementById('grid')!;
+    const items = Array.from(grid.querySelectorAll<HTMLElement>('.grid-item'));
+    const empty = document.getElementById('empty')!;
+    const chipsBox = document.getElementById('active-chips')!;
+    const countEl = document.getElementById('result-count')!;
+    const wordEl = document.getElementById('result-word')!;
+    const sortSelect = document.getElementById('sort-select') as HTMLSelectElement | null;
+    const searchInput = document.getElementById('noor-search') as HTMLInputElement | null;
+    const facetOpts = Array.from(document.querySelectorAll<HTMLButtonElement>('.facet-opt'));
+
+    type State = { cats: Set<string>; formats: Set<string>; licenses: Set<string>; flags: Set<string>; q: string };
+    const state: State = { cats: new Set(), formats: new Set(), licenses: new Set(), flags: new Set(), q: '' };
+
+    const flagAttr: Record<string, string> = { free: 'free', auth: 'auth', maintained: 'maintained', scholar: 'scholar' };
+    const flagLabel: Record<string, string> = { free: 'Free', auth: 'Auth required', maintained: 'Maintained', scholar: 'Scholar-reviewed' };
+
+    function matches(item: HTMLElement): boolean {
+      const d = item.dataset;
+      if (state.cats.size && !state.cats.has(d.category!)) return false;
+      if (state.formats.size && !state.formats.has(d.format!)) return false;
+      if (state.licenses.size && !state.licenses.has(d.license!)) return false;
+      for (const f of state.flags) {
+        if (item.getAttribute('data-' + flagAttr[f]) !== '1') return false;
+      }
+      if (state.q && !d.search!.includes(state.q)) return false;
+      return true;
+    }
+
+    function sortItems() {
+      const mode = sortSelect ? sortSelect.value : 'newest';
+      const sorted = items.slice().sort((a, b) => {
+        if (mode === 'name') return a.dataset.name!.localeCompare(b.dataset.name!);
+        if (mode === 'category') {
+          const c = a.dataset.catLabel!.localeCompare(b.dataset.catLabel!);
+          return c || a.dataset.name!.localeCompare(b.dataset.name!);
+        }
+        return b.dataset.date!.localeCompare(a.dataset.date!);
+      });
+      sorted.forEach((el) => grid.appendChild(el));
+    }
+
+    function renderChips() {
+      const chips: { label: string; remove: () => void }[] = [];
+      state.cats.forEach((v) => chips.push({ label: labelFor('cats', v), remove: () => toggle('cats', v) }));
+      state.formats.forEach((v) => chips.push({ label: v, remove: () => toggle('formats', v) }));
+      state.licenses.forEach((v) => chips.push({ label: v, remove: () => toggle('licenses', v) }));
+      state.flags.forEach((v) => chips.push({ label: flagLabel[v], remove: () => toggle('flags', v) }));
+      if (state.q) chips.push({ label: '“' + state.q + '”', remove: () => { if (searchInput) searchInput.value = ''; state.q = ''; apply(); } });
+
+      chipsBox.innerHTML = '';
+      if (!chips.length) { chipsBox.hidden = true; return; }
+      chipsBox.hidden = false;
+      chips.forEach((c) => {
+        const b = document.createElement('button');
+        b.className = 'chip';
+        b.innerHTML = c.label + '<span class="x">×</span>';
+        b.addEventListener('click', c.remove);
+        chipsBox.appendChild(b);
+      });
+      const clear = document.createElement('button');
+      clear.className = 'chip-clear';
+      clear.textContent = 'Clear all';
+      clear.addEventListener('click', clearAll);
+      chipsBox.appendChild(clear);
+    }
+
+    function labelFor(type: string, value: string): string {
+      const opt = facetOpts.find((o) => o.dataset.type === type && o.dataset.value === value);
+      const el = opt?.querySelector('.opt-label');
+      return el ? (el.textContent || value) : value;
+    }
+
+    function apply() {
+      let visible = 0;
+      items.forEach((item) => {
+        const show = matches(item);
+        item.hidden = !show;
+        if (show) visible++;
+      });
+      sortItems();
+      countEl.textContent = String(visible);
+      wordEl.textContent = visible === 1 ? 'result' : 'results';
+      empty.hidden = visible !== 0;
+      grid.hidden = visible === 0;
+      renderChips();
+    }
+
+    function toggle(type: keyof State, value: string) {
+      const set = state[type] as Set<string>;
+      if (set.has(value)) set.delete(value);
+      else set.add(value);
+      facetOpts.forEach((o) => {
+        if (o.dataset.type === type) o.classList.toggle('active', (state[o.dataset.type as keyof State] as Set<string>).has(o.dataset.value!));
+      });
+      apply();
+    }
+
+    function clearAll() {
+      state.cats.clear(); state.formats.clear(); state.licenses.clear(); state.flags.clear(); state.q = '';
+      if (searchInput) searchInput.value = '';
+      facetOpts.forEach((o) => o.classList.remove('active'));
+      apply();
+    }
+
+    facetOpts.forEach((o) => o.addEventListener('click', () => toggle(o.dataset.type as keyof State, o.dataset.value!)));
+    if (sortSelect) sortSelect.addEventListener('change', apply);
+    if (searchInput) searchInput.addEventListener('input', () => { state.q = searchInput.value.trim().toLowerCase(); apply(); });
+    document.querySelectorAll('[data-clear]').forEach((b) => b.addEventListener('click', clearAll));
+
+    apply();
+  })();
+</script>

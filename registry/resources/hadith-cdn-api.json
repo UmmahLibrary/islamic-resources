@@ -4,17 +4,35 @@
   "name": "Hadith CDN API (fawazahmed0)",
   "description": "Free, no-rate-limit Hadith API served via jsDelivr CDN. Covers 17+ collections (Bukhari, Muslim, Tirmidhi, and more) in 15+ languages with authentic grading per hadith. No API key, no sign-up.",
   "category": "hadith",
-  "url": "https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1",
+  "url": "https://github.com/fawazahmed0/hadith-api",
   "docs": "https://github.com/fawazahmed0/hadith-api/blob/1/README.md",
   "repo": "https://github.com/fawazahmed0/hadith-api",
   "license": "Unlicense",
-  "languages": ["ar", "en", "ur", "bn", "tr", "id", "fr", "ru"],
+  "languages": [
+    "ar",
+    "en",
+    "ur",
+    "bn",
+    "tr",
+    "id",
+    "fr",
+    "ru"
+  ],
   "format": "json",
   "free": true,
   "auth_required": false,
   "scholar_reviewed": false,
   "maintained": true,
-  "tags": ["hadith", "bukhari", "muslim", "grading", "multilingual", "cdn", "no-auth"],
+  "tags": [
+    "hadith",
+    "bukhari",
+    "muslim",
+    "grading",
+    "multilingual",
+    "cdn",
+    "no-auth"
+  ],
   "added": "2026-06-14",
-  "attribution": "fawazahmed0"
+  "attribution": "fawazahmed0",
+  "endpoint": "https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/eng-bukhari/1.json"
 }

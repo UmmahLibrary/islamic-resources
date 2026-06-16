@@ -7,13 +7,22 @@
   "url": "https://www.npmjs.com/package/adhan",
   "repo": "https://github.com/batoulapps/adhan-js",
   "license": "MIT",
-  "languages": ["ar"],
+  "languages": [
+    "ar"
+  ],
   "format": "npm",
   "free": true,
   "auth_required": false,
   "scholar_reviewed": false,
   "maintained": true,
-  "tags": ["prayer-times", "adhan", "calculation", "typescript", "offline"],
+  "tags": [
+    "prayer-times",
+    "adhan",
+    "calculation",
+    "typescript",
+    "offline"
+  ],
   "added": "2026-06-14",
-  "attribution": "Batoul Apps"
+  "attribution": "Batoul Apps",
+  "package": "adhan"
 }

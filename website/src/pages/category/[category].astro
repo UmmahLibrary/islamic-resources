@@ -1,0 +1,64 @@
+---
+import Base from '../../layouts/Base.astro';
+import ResourceGrid from '../../components/ResourceGrid.astro';
+import registry from '../../../../registry/index.json';
+import type { Resource } from '@islamic-resources/adapters';
+import { CATEGORIES, catMeta, catIcon } from '../../lib/ui';
+
+export function getStaticPaths() {
+  const all = registry.resources as Resource[];
+  return CATEGORIES
+    .filter((c) => all.some((r) => r.category === c.key))
+    .map((c) => ({
+      params: { category: c.key },
+      props: { resources: all.filter((r) => r.category === c.key) },
+    }));
+}
+
+interface Props { resources: Resource[]; }
+const { resources } = Astro.props;
+const { category } = Astro.params;
+const meta = catMeta(category!);
+---
+
+<Base title={meta.label} description={meta.blurb}>
+  <section class="cat-header">
+    <div class="noor-texture" aria-hidden="true"></div>
+    <div class="cat-inner">
+      <a class="back" href="/">← All resources</a>
+      <div class="cat-row">
+        <span class="cat-glyph" set:html={catIcon(category!, 28)} />
+        <div style="min-width:0">
+          <h1>{meta.label}</h1>
+          <p>{meta.blurb}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ResourceGrid resources={resources} scopedCategory={category} />
+</Base>
+
+<style>
+  .cat-header { position: relative; overflow: hidden; border-bottom: 1px solid var(--noor-border-soft); }
+  .cat-inner { position: relative; max-width: 1200px; margin: 0 auto; padding: 34px 24px 30px; }
+  .back {
+    display: inline-flex; align-items: center; gap: 6px; color: var(--noor-muted);
+    font-size: 13px; transition: color 0.15s;
+  }
+  .back:hover { color: var(--noor-gold); }
+  .cat-row { display: flex; align-items: center; gap: 16px; margin-top: 18px; }
+  .cat-glyph {
+    width: 58px; height: 58px; border-radius: 14px; flex: none;
+    background: var(--noor-gold-soft); color: var(--noor-gold);
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .cat-header h1 {
+    margin: 0; font-size: clamp(26px, 3.4vw, 38px); font-weight: 700;
+    color: var(--noor-fg); letter-spacing: -0.4px;
+  }
+  .cat-header p {
+    margin: 7px 0 0; font-size: 15px; line-height: 1.5; color: var(--noor-muted);
+    max-width: 640px; text-wrap: pretty;
+  }
+</style>

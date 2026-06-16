@@ -8,13 +8,23 @@
   "docs": "https://sunnah.com/developers",
   "repo": "https://github.com/sunnah-com/api",
   "license": "MIT",
-  "languages": ["ar", "en"],
+  "languages": [
+    "ar",
+    "en"
+  ],
   "format": "rest-api",
   "free": true,
   "auth_required": true,
   "scholar_reviewed": true,
   "maintained": true,
-  "tags": ["hadith", "bukhari", "muslim", "sunnah", "arabic"],
+  "tags": [
+    "hadith",
+    "bukhari",
+    "muslim",
+    "sunnah",
+    "arabic"
+  ],
   "added": "2026-06-14",
-  "attribution": "Sunnah.com"
+  "attribution": "Sunnah.com",
+  "endpoint": "https://api.sunnah.com/v1/collections"
 }

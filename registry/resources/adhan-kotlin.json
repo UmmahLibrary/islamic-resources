@@ -7,13 +7,23 @@
   "url": "https://github.com/batoulapps/adhan-kotlin",
   "repo": "https://github.com/batoulapps/adhan-kotlin",
   "license": "MIT",
-  "languages": ["ar"],
+  "languages": [
+    "ar"
+  ],
   "format": "maven",
   "free": true,
   "auth_required": false,
   "scholar_reviewed": false,
   "maintained": true,
-  "tags": ["prayer-times", "android", "kotlin", "multiplatform", "jvm", "offline"],
+  "tags": [
+    "prayer-times",
+    "android",
+    "kotlin",
+    "multiplatform",
+    "jvm",
+    "offline"
+  ],
   "added": "2026-06-14",
-  "attribution": "Batoul Apps"
+  "attribution": "Batoul Apps",
+  "package": "com.batoulapps.adhan:adhan"
 }

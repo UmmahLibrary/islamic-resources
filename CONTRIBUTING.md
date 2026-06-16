@@ -15,6 +15,21 @@
   has reviewed the content — do not self-set it in your PR.
 - **License**: must be open-source or have a clearly documented free/open-data tier.
 
+## Optional snippet fields
+
+The website generates a "Quick start" code block for each resource. Two optional fields make
+those snippets exact instead of best-guess:
+
+- **`package`** — the exact install/import name for package formats. Use the registry name
+  verbatim: `adhan`, `@quranjs/api`, `islam` (pip), `salah` (cargo). For Maven, use
+  `groupId:artifactId`, e.g. `com.batoulapps.adhan:adhan`.
+- **`endpoint`** — an example request URL for `rest-api`/`graphql`/data formats. Used in the
+  fetch/cURL snippets instead of the landing `url`,
+  e.g. `https://api.aladhan.com/v1/timings?latitude=51.5&longitude=-0.12&method=2`.
+
+Both are optional — when omitted, snippets fall back to a slug derived from the name and the
+landing `url`.
+
 ## Resource ID conventions
 
 - Kebab-case, lowercase: `quran-com`, `adhan-js`, `aladhan-api`

@@ -22,6 +22,15 @@
     "url": { "type": "string", "format": "uri" },
     "docs": { "type": "string", "format": "uri" },
     "repo": { "type": "string", "format": "uri" },
+    "package": {
+      "type": "string",
+      "description": "Exact install/import name for package formats (npm, pip, cargo, pub, swift, maven). Used verbatim in quick-start snippets."
+    },
+    "endpoint": {
+      "type": "string",
+      "format": "uri",
+      "description": "Example request URL for rest-api/graphql/data formats. Used verbatim in quick-start snippets instead of the landing url."
+    },
     "license": { "type": "string" },
     "languages": {
       "type": "array",

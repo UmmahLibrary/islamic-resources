@@ -7,13 +7,22 @@
   "url": "https://pypi.org/project/adhanpy/",
   "repo": "https://github.com/alphahm/adhanpy",
   "license": "MIT",
-  "languages": ["ar"],
+  "languages": [
+    "ar"
+  ],
   "format": "pip",
   "free": true,
   "auth_required": false,
   "scholar_reviewed": false,
   "maintained": true,
-  "tags": ["prayer-times", "python", "offline", "pip", "zero-dependencies"],
+  "tags": [
+    "prayer-times",
+    "python",
+    "offline",
+    "pip",
+    "zero-dependencies"
+  ],
   "added": "2026-06-14",
-  "attribution": "alphahm"
+  "attribution": "alphahm",
+  "package": "adhanpy"
 }

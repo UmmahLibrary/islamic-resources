@@ -7,13 +7,25 @@
   "url": "https://pypi.org/project/islam/",
   "repo": "https://github.com/abougouffa/pyIslam",
   "license": "GPL-3.0",
-  "languages": ["ar", "en"],
+  "languages": [
+    "ar",
+    "en"
+  ],
   "format": "pip",
   "free": true,
   "auth_required": false,
   "scholar_reviewed": false,
   "maintained": true,
-  "tags": ["prayer-times", "hijri", "qibla", "zakat", "mirath", "python", "offline"],
+  "tags": [
+    "prayer-times",
+    "hijri",
+    "qibla",
+    "zakat",
+    "mirath",
+    "python",
+    "offline"
+  ],
   "added": "2026-06-14",
-  "attribution": "Abdelhak Bougouffa"
+  "attribution": "Abdelhak Bougouffa",
+  "package": "islam"
 }

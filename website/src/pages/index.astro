@@ -3,38 +3,106 @@ import Base from '../layouts/Base.astro';
 import ResourceGrid from '../components/ResourceGrid.astro';
 import registry from '../../../registry/index.json';
 import type { Resource } from '@islamic-resources/adapters';
+import { CATEGORIES, catIcon, ICONS } from '../lib/ui';
 
 const resources = registry.resources as Resource[];
+const tiles = CATEGORIES.map((c) => {
+  const n = resources.filter((r) => r.category === c.key).length;
+  return { ...c, count: n };
+}).filter((c) => c.count > 0);
 ---
 
 <Base title="Home">
-  <div class="hero">
-    <h2>Islamic Resources Registry</h2>
-    <p>
-      A curated directory of open-source Islamic data sets, APIs, and libraries.
-      Machine-readable JSON — human-browsable here.
-    </p>
-    <div class="stats">
-      <span>{resources.length} resources</span>
-      <a href="https://github.com/rashidmya/islamic-resources/blob/main/CONTRIBUTING.md">
-        Add a resource →
-      </a>
+  <section class="hero">
+    <div class="noor-texture" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="dot"></span>{resources.length} resources · {tiles.length} categories
+      </div>
+      <h1>Build Islamic apps on trustworthy, open data.</h1>
+      <p>A curated, open directory of Islamic data sets, APIs, and developer libraries — vetted for licensing, maintenance, and trust.</p>
+      <div class="search">
+        <span class="search-icon" set:html={ICONS.search} />
+        <input
+          id="noor-search"
+          type="text"
+          placeholder="Search resources — prayer times, hadith, tafsir…"
+          aria-label="Search resources"
+          autocomplete="off"
+        />
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="tiles-section">
+    <h2>Browse by category</h2>
+    <div class="tiles">
+      {tiles.map((c) => (
+        <a class="tile" href={`/category/${c.key}`} aria-label={c.label}>
+          <span class="tile-glyph" set:html={catIcon(c.key, 18)} />
+          <span class="tile-text">
+            <span class="tile-label">{c.label}</span>
+            <span class="tile-count">{c.count}{c.count === 1 ? ' resource' : ' resources'}</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
 
   <ResourceGrid resources={resources} />
 </Base>
 
 <style>
-  .hero { margin-bottom: 2rem; }
-  .hero h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; }
-  .hero p { color: #57534e; max-width: 600px; }
-  .stats {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    margin-top: 0.75rem;
-    font-size: 0.875rem;
-    color: #78716c;
+  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--noor-border-soft); }
+  .hero-inner { position: relative; max-width: 1200px; margin: 0 auto; padding: 54px 24px 40px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; border-radius: 999px;
+    border: 1px solid var(--noor-gold-dim); background: var(--noor-gold-soft); color: var(--noor-gold);
+    font-size: 12px; font-weight: 600; margin-bottom: 20px;
   }
+  .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--noor-gold); }
+  .hero h1 {
+    margin: 0 0 14px; font-size: clamp(28px, 4.4vw, 46px); line-height: 1.05; font-weight: 700;
+    letter-spacing: -0.6px; color: var(--noor-fg); max-width: 780px; text-wrap: balance;
+  }
+  .hero p {
+    margin: 0 0 28px; font-size: clamp(15px, 1.7vw, 18px); line-height: 1.5;
+    color: var(--noor-muted); max-width: 600px; text-wrap: pretty;
+  }
+  .search { position: relative; max-width: 600px; }
+  .search-icon {
+    position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+    color: var(--noor-faint); display: inline-flex; pointer-events: none;
+  }
+  .search input {
+    width: 100%; padding: 15px 16px 15px 47px; border-radius: 12px;
+    border: 1px solid var(--noor-border); background: var(--noor-card); color: var(--noor-fg);
+    font-size: 15px; font-family: inherit; outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .search input:focus { border-color: var(--noor-gold); box-shadow: 0 0 0 3px var(--noor-gold-soft); }
+
+  .tiles-section { max-width: 1200px; margin: 0 auto; padding: 30px 24px 0; }
+  .tiles-section h2 {
+    margin: 0 0 14px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.13em;
+    color: var(--noor-faint); font-weight: 600;
+  }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; }
+  .tile {
+    display: flex; align-items: center; gap: 11px; padding: 13px 14px; border-radius: 12px;
+    border: 1px solid var(--noor-border-soft); background: var(--noor-card);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .tile:hover { border-color: var(--noor-gold-dim); transform: translateY(-2px); }
+  .tile:focus-visible { border-color: var(--noor-gold); box-shadow: 0 0 0 3px var(--noor-gold-soft); outline: none; }
+  .tile-glyph {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; border-radius: 9px; flex: none;
+    background: var(--noor-gold-soft); color: var(--noor-gold);
+  }
+  .tile-text { display: flex; flex-direction: column; min-width: 0; }
+  .tile-label {
+    font-size: 13.5px; font-weight: 600; color: var(--noor-fg);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .tile-count { font-size: 11px; color: var(--noor-faint); font-family: var(--mono); }
 </style>

@@ -5,16 +5,27 @@
   "description": "Comprehensive Arabic NLP toolkit by NYU Abu Dhabi. Provides morphological analysis, dialect identification, named entity recognition, sentiment analysis, and text utilities for Modern Standard Arabic and Classical Arabic — directly applicable to Quranic and hadith text processing.",
   "category": "general",
   "url": "https://pypi.org/project/camel-tools/",
-  "docs": "https://camel-tools.readthedocs.io",
+  "docs": "https://camel-tools.readthedocs.io/en/latest/",
   "repo": "https://github.com/CAMeL-Lab/camel_tools",
   "license": "MIT",
-  "languages": ["ar"],
+  "languages": [
+    "ar"
+  ],
   "format": "pip",
   "free": true,
   "auth_required": false,
   "scholar_reviewed": false,
   "maintained": true,
-  "tags": ["arabic", "nlp", "morphology", "classical-arabic", "quran", "python", "ner"],
+  "tags": [
+    "arabic",
+    "nlp",
+    "morphology",
+    "classical-arabic",
+    "quran",
+    "python",
+    "ner"
+  ],
   "added": "2026-06-14",
-  "attribution": "NYU Abu Dhabi CAMeL Lab"
+  "attribution": "NYU Abu Dhabi CAMeL Lab",
+  "package": "camel-tools"
 }

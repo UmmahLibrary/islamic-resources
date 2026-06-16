@@ -7,13 +7,24 @@
   "url": "https://www.npmjs.com/package/moment-hijri",
   "repo": "https://github.com/xsoh/moment-hijri",
   "license": "MIT",
-  "languages": ["ar", "en"],
+  "languages": [
+    "ar",
+    "en"
+  ],
   "format": "npm",
   "free": true,
   "auth_required": false,
   "scholar_reviewed": false,
   "maintained": false,
-  "tags": ["hijri", "calendar", "moment", "javascript", "umm-al-qura", "date-conversion"],
+  "tags": [
+    "hijri",
+    "calendar",
+    "moment",
+    "javascript",
+    "umm-al-qura",
+    "date-conversion"
+  ],
   "added": "2026-06-14",
-  "attribution": "Suhail Alkowaileet"
+  "attribution": "Suhail Alkowaileet",
+  "package": "moment-hijri"
 }

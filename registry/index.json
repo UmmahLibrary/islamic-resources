@@ -52,7 +52,8 @@
         "offline"
       ],
       "added": "2026-06-14",
-      "attribution": "Batoul Apps"
+      "attribution": "Batoul Apps",
+      "package": "com.batoulapps.adhan:adhan"
     },
     {
       "id": "adhan-swift",
@@ -106,7 +107,8 @@
         "offline"
       ],
       "added": "2026-06-14",
-      "attribution": "Batoul Apps"
+      "attribution": "Batoul Apps",
+      "package": "adhan"
     },
     {
       "id": "adhanpy",
@@ -132,7 +134,8 @@
         "zero-dependencies"
       ],
       "added": "2026-06-14",
-      "attribution": "alphahm"
+      "attribution": "alphahm",
+      "package": "adhanpy"
     },
     {
       "id": "shamela",
@@ -168,7 +171,6 @@
       "category": "prayer-times",
       "url": "https://aladhan.com",
       "docs": "https://aladhan.com/prayer-times-api",
-      "repo": "https://github.com/islamic-network/api.aladhan.com",
       "license": "MIT",
       "languages": [
         "ar",
@@ -186,7 +188,8 @@
         "qibla"
       ],
       "added": "2026-06-14",
-      "attribution": "islamic-network"
+      "attribution": "islamic-network",
+      "endpoint": "https://api.aladhan.com/v1/timings?latitude=51.5&longitude=-0.12&method=2"
     },
     {
       "id": "al-quran-cloud",
@@ -196,7 +199,6 @@
       "subcategory": "text",
       "url": "https://alquran.cloud",
       "docs": "https://alquran.cloud/api",
-      "repo": "https://github.com/islamic-network/alquran.cloud",
       "license": "MIT",
       "languages": [
         "ar",
@@ -216,7 +218,8 @@
         "audio"
       ],
       "added": "2026-06-14",
-      "attribution": "islamic-network"
+      "attribution": "islamic-network",
+      "endpoint": "https://api.alquran.cloud/v1/ayah/262/en.asad"
     },
     {
       "id": "camel-tools",
@@ -224,7 +227,7 @@
       "description": "Comprehensive Arabic NLP toolkit by NYU Abu Dhabi. Provides morphological analysis, dialect identification, named entity recognition, sentiment analysis, and text utilities for Modern Standard Arabic and Classical Arabic — directly applicable to Quranic and hadith text processing.",
       "category": "general",
       "url": "https://pypi.org/project/camel-tools/",
-      "docs": "https://camel-tools.readthedocs.io",
+      "docs": "https://camel-tools.readthedocs.io/en/latest/",
       "repo": "https://github.com/CAMeL-Lab/camel_tools",
       "license": "MIT",
       "languages": [
@@ -245,7 +248,8 @@
         "ner"
       ],
       "added": "2026-06-14",
-      "attribution": "NYU Abu Dhabi CAMeL Lab"
+      "attribution": "NYU Abu Dhabi CAMeL Lab",
+      "package": "camel-tools"
     },
     {
       "id": "dorar-hadith-api",
@@ -315,7 +319,7 @@
       "description": "REST API providing access to major hadith collections: Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah, Malik, and Riyadh al-Salihin.",
       "category": "hadith",
       "url": "https://hadithapi.com",
-      "docs": "https://hadithapi.com/docs",
+      "docs": "https://hadithapi.com/docs/hadiths",
       "license": "Proprietary (free tier)",
       "languages": [
         "ar",
@@ -341,7 +345,7 @@
       "name": "Hadith CDN API (fawazahmed0)",
       "description": "Free, no-rate-limit Hadith API served via jsDelivr CDN. Covers 17+ collections (Bukhari, Muslim, Tirmidhi, and more) in 15+ languages with authentic grading per hadith. No API key, no sign-up.",
       "category": "hadith",
-      "url": "https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1",
+      "url": "https://github.com/fawazahmed0/hadith-api",
       "docs": "https://github.com/fawazahmed0/hadith-api/blob/1/README.md",
       "repo": "https://github.com/fawazahmed0/hadith-api",
       "license": "Unlicense",
@@ -370,7 +374,8 @@
         "no-auth"
       ],
       "added": "2026-06-14",
-      "attribution": "fawazahmed0"
+      "attribution": "fawazahmed0",
+      "endpoint": "https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/eng-bukhari/1.json"
     },
     {
       "id": "hadith-json",
@@ -406,7 +411,7 @@
       "description": "Python library for accurate Hijri/Gregorian date conversion based on the Umm al-Qura calendar, verified against KACST data. Covers 1343–1500 AH. Zero dependencies, 100% test coverage, actively maintained.",
       "category": "calendar",
       "url": "https://pypi.org/project/hijridate/",
-      "docs": "https://hijridate.readthedocs.io",
+      "docs": "https://hijridate.readthedocs.io/en/stable/",
       "repo": "https://github.com/dralshehri/hijridate",
       "license": "MIT",
       "languages": [
@@ -427,7 +432,8 @@
         "offline"
       ],
       "added": "2026-06-14",
-      "attribution": "Mohammed Al-Shehri"
+      "attribution": "Mohammed Al-Shehri",
+      "package": "hijridate"
     },
     {
       "id": "hisnul-muslim-json",
@@ -510,7 +516,8 @@
         "date-conversion"
       ],
       "added": "2026-06-14",
-      "attribution": "Suhail Alkowaileet"
+      "attribution": "Suhail Alkowaileet",
+      "package": "moment-hijri"
     },
     {
       "id": "morning-evening-adhkar",
@@ -568,7 +575,8 @@
         "reciters"
       ],
       "added": "2026-06-14",
-      "attribution": "MP3Quran.net"
+      "attribution": "MP3Quran.net",
+      "endpoint": "https://www.mp3quran.net/api/v3/reciters?language=eng"
     },
     {
       "id": "muslim-data",
@@ -637,7 +645,6 @@
       "description": "Python library for Arabic text manipulation and processing. Covers diacritic (tashkeel) handling, tokenization, normalization, transliteration, and text comparison. Essential preprocessing tool for Islamic text analysis and Quran/hadith NLP pipelines.",
       "category": "general",
       "url": "https://pypi.org/project/pyarabic/",
-      "docs": "https://pyarabic.readthedocs.io",
       "repo": "https://github.com/linuxscout/pyarabic",
       "license": "GPL-2.0",
       "languages": [
@@ -658,7 +665,8 @@
         "preprocessing"
       ],
       "added": "2026-06-14",
-      "attribution": "Taha Zerrouki"
+      "attribution": "Taha Zerrouki",
+      "package": "pyarabic"
     },
     {
       "id": "pyislam",
@@ -687,7 +695,8 @@
         "offline"
       ],
       "added": "2026-06-14",
-      "attribution": "Abdelhak Bougouffa"
+      "attribution": "Abdelhak Bougouffa",
+      "package": "islam"
     },
     {
       "id": "fawaz-quran-api",
@@ -695,7 +704,7 @@
       "description": "Free, no-rate-limit Quran API served via jsDelivr CDN. Covers 90+ languages and 440+ translations as static JSON files. No server, no auth, no sign-up — just fetch a URL.",
       "category": "quran",
       "subcategory": "text",
-      "url": "https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1",
+      "url": "https://github.com/fawazahmed0/quran-api",
       "docs": "https://github.com/fawazahmed0/quran-api/blob/1/README.md",
       "repo": "https://github.com/fawazahmed0/quran-api",
       "license": "Unlicense",
@@ -727,7 +736,8 @@
         "440-translations"
       ],
       "added": "2026-06-14",
-      "attribution": "fawazahmed0"
+      "attribution": "fawazahmed0",
+      "endpoint": "https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/eng-abdullahyusufal/2.json"
     },
     {
       "id": "quranjs-api",
@@ -765,7 +775,8 @@
         "sdk"
       ],
       "added": "2026-06-14",
-      "attribution": "Quran Foundation"
+      "attribution": "Quran Foundation",
+      "package": "@quranjs/api"
     },
     {
       "id": "quran-json",
@@ -802,7 +813,8 @@
         "transliteration"
       ],
       "added": "2026-06-14",
-      "attribution": "Risan Bagja Putra"
+      "attribution": "Risan Bagja Putra",
+      "package": "quran-json"
     },
     {
       "id": "quran-com",
@@ -811,8 +823,7 @@
       "category": "quran",
       "subcategory": "text",
       "url": "https://api.quran.com",
-      "docs": "https://api.quran.com/documentation/v4",
-      "repo": "https://github.com/quran/quran.com-api",
+      "docs": "https://api-docs.quran.com",
       "license": "MIT",
       "languages": [
         "ar",
@@ -837,7 +848,8 @@
         "recitation"
       ],
       "added": "2026-06-14",
-      "attribution": "Quran.com"
+      "attribution": "Quran.com",
+      "endpoint": "https://api.quran.com/api/v4/chapters/1?language=en"
     },
     {
       "id": "quran-arabic-corpus",
@@ -932,7 +944,8 @@
         "embedded"
       ],
       "added": "2026-06-14",
-      "attribution": "insha"
+      "attribution": "insha",
+      "package": "salah"
     },
     {
       "id": "sunnah-com",
@@ -960,7 +973,8 @@
         "arabic"
       ],
       "added": "2026-06-14",
-      "attribution": "Sunnah.com"
+      "attribution": "Sunnah.com",
+      "endpoint": "https://api.sunnah.com/v1/collections"
     },
     {
       "id": "tafseer-api",
@@ -995,7 +1009,7 @@
       "name": "Tafsir CDN API (spa5k)",
       "description": "Free, no-rate-limit tafsir API serving 122 tafsirs via jsDelivr CDN as static JSON. Covers classical and contemporary exegesis in Arabic, English, Urdu, and other languages. No server or auth required.",
       "category": "tafsir",
-      "url": "https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/",
+      "url": "https://github.com/spa5k/tafsir_api",
       "docs": "https://github.com/spa5k/tafsir_api",
       "repo": "https://github.com/spa5k/tafsir_api",
       "license": "MIT",
@@ -1020,7 +1034,8 @@
         "exegesis"
       ],
       "added": "2026-06-14",
-      "attribution": "spa5k"
+      "attribution": "spa5k",
+      "endpoint": "https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/en-tafisr-ibn-kathir/2/255.json"
     },
     {
       "id": "tanzil",

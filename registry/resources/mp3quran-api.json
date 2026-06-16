@@ -9,13 +9,23 @@
   "docs": "https://www.mp3quran.net/eng/api",
   "repo": "https://github.com/MP3Quran/apis",
   "license": "Free to use",
-  "languages": ["ar"],
+  "languages": [
+    "ar"
+  ],
   "format": "rest-api",
   "free": true,
   "auth_required": false,
   "scholar_reviewed": true,
   "maintained": true,
-  "tags": ["quran", "audio", "recitation", "mp3", "streaming", "reciters"],
+  "tags": [
+    "quran",
+    "audio",
+    "recitation",
+    "mp3",
+    "streaming",
+    "reciters"
+  ],
   "added": "2026-06-14",
-  "attribution": "MP3Quran.net"
+  "attribution": "MP3Quran.net",
+  "endpoint": "https://www.mp3quran.net/api/v3/reciters?language=eng"
 }

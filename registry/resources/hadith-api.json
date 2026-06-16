@@ -5,15 +5,24 @@
   "description": "REST API providing access to major hadith collections: Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah, Malik, and Riyadh al-Salihin.",
   "category": "hadith",
   "url": "https://hadithapi.com",
-  "docs": "https://hadithapi.com/docs",
+  "docs": "https://hadithapi.com/docs/hadiths",
   "license": "Proprietary (free tier)",
-  "languages": ["ar", "en", "ur"],
+  "languages": [
+    "ar",
+    "en",
+    "ur"
+  ],
   "format": "rest-api",
   "free": true,
   "auth_required": true,
   "scholar_reviewed": true,
   "maintained": true,
-  "tags": ["hadith", "bukhari", "muslim", "sunnah"],
+  "tags": [
+    "hadith",
+    "bukhari",
+    "muslim",
+    "sunnah"
+  ],
   "added": "2026-06-14",
   "attribution": "HadithAPI.com"
 }

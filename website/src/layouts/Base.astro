@@ -1,9 +1,11 @@
 ---
+import { CATEGORIES, ICONS } from '../lib/ui';
+
 interface Props {
   title: string;
   description?: string;
 }
-const { title, description = 'A curated registry of open-source Islamic resources.' } = Astro.props;
+const { title, description = 'A curated, open directory of Islamic data sets, APIs, and developer libraries — vetted for licensing, maintenance, and trust.' } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,30 +15,200 @@ const { title, description = 'A curated registry of open-source Islamic resource
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} · Islamic Resources</title>
     <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline>
+      // Set the theme before paint to avoid a flash.
+      (function () {
+        try {
+          var saved = localStorage.getItem('noor-theme');
+          var theme = saved
+            ? saved
+            : window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
     <style>
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      body { font-family: system-ui, sans-serif; color: #1a1a1a; background: #fafaf9; line-height: 1.6; }
-      a { color: #166534; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      header {
-        border-bottom: 1px solid #e7e5e4;
-        padding: 1rem 2rem;
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      :root, :root[data-theme='dark'] {
+        --noor-bg: #0a0b0f; --noor-bg2: #0e1017; --noor-card: #14171f; --noor-card-hi: #191d27;
+        --noor-border: #242a38; --noor-border-soft: #1b2029; --noor-fg: #f4f1ea;
+        --noor-muted: #9aa0b2; --noor-faint: #5c6273;
+        --noor-gold: #e6b855; --noor-gold-hi: #f4d58a; --noor-gold-dim: #a98432;
+        --noor-gold-soft: rgba(230, 184, 85, 0.12);
+        --noor-gold-grad: linear-gradient(180deg, #f4d58a, #e6b855);
+        --noor-ink: #1a1404;
+        --ok: #5db98b; --warn: #e0a755; --info: #6ea8e0;
+        --mono: 'IBM Plex Mono', ui-monospace, monospace;
+        --arabic: 'IBM Plex Sans Arabic', system-ui, sans-serif;
       }
-      header .site-name { font-size: 1.1rem; font-weight: 600; }
-      header .tagline { color: #78716c; font-size: 0.85rem; }
-      main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+      :root[data-theme='light'] {
+        --noor-bg: #faf6ee; --noor-bg2: #f3ecdd; --noor-card: #ffffff; --noor-card-hi: #fbf6ec;
+        --noor-border: #e7decb; --noor-border-soft: #f0e9da; --noor-fg: #1f1b12;
+        --noor-muted: #6e6757; --noor-faint: #a99e86;
+        --noor-gold: #b0842a; --noor-gold-hi: #c99a3a; --noor-gold-dim: #cbb488;
+        --noor-gold-soft: rgba(176, 132, 40, 0.14);
+        --noor-gold-grad: linear-gradient(180deg, #c99a3a, #b0842a);
+        --noor-ink: #2a1f08;
+        --ok: #2f8f63; --warn: #b07d2a; --info: #3a72b0;
+      }
+      body {
+        background: var(--noor-bg);
+        color: var(--noor-fg);
+        font-family: 'Hanken Grotesk', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        color-scheme: dark;
+      }
+      :root[data-theme='light'] body { color-scheme: light; }
+      ::selection { background: var(--noor-gold-soft); }
+      a { color: inherit; text-decoration: none; }
+      @keyframes noorIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+      .noor-texture {
+        position: absolute; inset: 0; pointer-events: none; opacity: 0.5;
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%3E%3Cg%20fill='none'%20stroke='%23e6b855'%20stroke-width='1'%20opacity='0.5'%3E%3Crect%20x='11'%20y='11'%20width='12'%20height='12'/%3E%3Crect%20x='11'%20y='11'%20width='12'%20height='12'%20transform='rotate(45%2017%2017)'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: 34px 34px;
+        -webkit-mask-image: linear-gradient(180deg, #000, transparent 92%);
+        mask-image: linear-gradient(180deg, #000, transparent 92%);
+      }
+
+      .noor-rail::-webkit-scrollbar, pre::-webkit-scrollbar { width: 8px; height: 8px; }
+      .noor-rail::-webkit-scrollbar-thumb, pre::-webkit-scrollbar-thumb { background: var(--noor-border); border-radius: 8px; }
+
+      .site-header {
+        position: sticky; top: 0; z-index: 50;
+        background: color-mix(in oklab, var(--noor-bg) 84%, transparent);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--noor-border-soft);
+      }
+      .site-header .inner {
+        max-width: 1200px; margin: 0 auto; padding: 12px 24px;
+        display: flex; align-items: center; gap: 16px;
+      }
+      .brand { display: flex; align-items: center; gap: 10px; line-height: 1.08; }
+      .brand .mark { display: inline-flex; color: var(--noor-gold); }
+      .brand .name { font-weight: 700; font-size: 15px; letter-spacing: 0.2px; color: var(--noor-fg); }
+      .brand .host { font-size: 10.5px; color: var(--noor-faint); font-family: var(--mono); }
+      .header-link {
+        display: inline-flex; align-items: center; gap: 7px; font-size: 13px;
+        color: var(--noor-muted); padding: 8px 13px; border-radius: 9px;
+        border: 1px solid var(--noor-border-soft); white-space: nowrap;
+        transition: color 0.15s, border-color 0.15s;
+      }
+      .header-link:hover { color: var(--noor-fg); border-color: var(--noor-border); }
+      .theme-toggle {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 38px; height: 38px; border-radius: 9px;
+        border: 1px solid var(--noor-border-soft); background: var(--noor-card);
+        color: var(--noor-muted); cursor: pointer; transition: color 0.15s, border-color 0.15s;
+      }
+      .theme-toggle:hover { color: var(--noor-gold); border-color: var(--noor-gold-dim); }
+      :root[data-theme='light'] .theme-toggle .icon-sun { display: none; }
+      :root:not([data-theme='light']) .theme-toggle .icon-moon { display: none; }
+
+      .site-footer { border-top: 1px solid var(--noor-border-soft); background: var(--noor-bg2); }
+      .site-footer .cols {
+        max-width: 1200px; margin: 0 auto; padding: 34px 24px;
+        display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start; justify-content: space-between;
+      }
+      .site-footer .blurb { max-width: 300px; }
+      .site-footer .blurb p { margin: 0; font-size: 13px; line-height: 1.55; color: var(--noor-muted); }
+      .site-footer .brandline { display: flex; align-items: center; gap: 9px; margin-bottom: 11px; }
+      .site-footer .brandline span.label { font-weight: 700; color: var(--noor-fg); white-space: nowrap; }
+      .site-footer .groups { display: flex; gap: 48px; flex-wrap: wrap; }
+      .site-footer h4 {
+        font-size: 11px; text-transform: uppercase; letter-spacing: 0.11em;
+        color: var(--noor-faint); font-weight: 600; margin: 0 0 11px;
+      }
+      .site-footer .links { display: flex; flex-direction: column; gap: 8px; }
+      .site-footer .links a { font-size: 13px; color: var(--noor-muted); transition: color 0.15s; }
+      .site-footer .links a:hover { color: var(--noor-gold); }
+      .site-footer .legal { border-top: 1px solid var(--noor-border-soft); padding: 16px 24px; }
+      .site-footer .legal div {
+        max-width: 1200px; margin: 0 auto; font-size: 12px;
+        color: var(--noor-faint); font-family: var(--mono);
+      }
+
+      @media (max-width: 560px) {
+        .site-header .inner { flex-wrap: wrap; gap: 10px; }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <a href="/"><span class="site-name">Islamic Resources</span></a>
-      <span class="tagline">Open-source Islamic data &amp; tools registry</span>
+    <header class="site-header">
+      <div class="inner">
+        <a href="/" class="brand" aria-label="Islamic Resources home">
+          <span class="mark" set:html={ICONS.brand} />
+          <span style="display:flex;flex-direction:column;line-height:1.08">
+            <span class="name">Islamic Resources</span>
+            <span class="host">resources.ummahlibrary.org</span>
+          </span>
+        </a>
+        <div style="flex:1"></div>
+        <a class="header-link" href="https://app.ummahlibrary.org" target="_blank" rel="noopener">
+          Reading app <span style="font-size:11px;opacity:.8">↗</span>
+        </a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+          <span class="icon-sun" set:html={ICONS.sun} />
+          <span class="icon-moon" set:html={ICONS.moon} />
+        </button>
+      </div>
     </header>
-    <main>
-      <slot />
-    </main>
+
+    <slot />
+
+    <footer class="site-footer">
+      <div class="cols">
+        <div class="blurb">
+          <div class="brandline">
+            <span class="mark" style="display:inline-flex;color:var(--noor-gold)" set:html={ICONS.brand} />
+            <span class="label">Islamic Resources</span>
+          </div>
+          <p>An open directory for developers building Islamic apps — the developer companion to the Ummah Library reading app.</p>
+        </div>
+        <div class="groups">
+          <div>
+            <h4>Categories</h4>
+            <div class="links">
+              {CATEGORIES.map((c) => <a href={`/category/${c.key}`}>{c.label}</a>)}
+            </div>
+          </div>
+          <div>
+            <h4>Project</h4>
+            <div class="links">
+              <a href="https://app.ummahlibrary.org" target="_blank" rel="noopener">Reading app ↗</a>
+              <a href="/">All resources</a>
+              <a href="https://github.com/rashidmya/islamic-resources/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Suggest a resource</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="legal">
+        <div>resources.ummahlibrary.org · Built with the Noor design system</div>
+      </div>
+    </footer>
+
+    <script is:inline>
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+          var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+          var next = cur === 'light' ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', next);
+          try { localStorage.setItem('noor-theme', next); } catch (e) {}
+        });
+      })();
+    </script>
   </body>
 </html>

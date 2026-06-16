@@ -6,15 +6,23 @@
   "category": "prayer-times",
   "url": "https://aladhan.com",
   "docs": "https://aladhan.com/prayer-times-api",
-  "repo": "https://github.com/islamic-network/api.aladhan.com",
   "license": "MIT",
-  "languages": ["ar", "en"],
+  "languages": [
+    "ar",
+    "en"
+  ],
   "format": "rest-api",
   "free": true,
   "auth_required": false,
   "scholar_reviewed": false,
   "maintained": true,
-  "tags": ["prayer-times", "hijri", "calendar", "qibla"],
+  "tags": [
+    "prayer-times",
+    "hijri",
+    "calendar",
+    "qibla"
+  ],
   "added": "2026-06-14",
-  "attribution": "islamic-network"
+  "attribution": "islamic-network",
+  "endpoint": "https://api.aladhan.com/v1/timings?latitude=51.5&longitude=-0.12&method=2"
 }

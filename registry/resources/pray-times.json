@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "pray-times",
+  "name": "Pray-Times",
+  "description": "Prayer time calculation library ported to seven languages — C++, Java, JavaScript, Python, Objective-C, C#/.NET, and PHP — from a single algorithm base (PrayTimes.org). Supports all major calculation methods. Useful when you need native prayer-time math in a language not covered by the Adhan family.",
+  "category": "prayer-times",
+  "url": "https://github.com/abodehq/Pray-Times",
+  "repo": "https://github.com/abodehq/Pray-Times",
+  "license": "LGPL-3.0",
+  "languages": [
+    "ar"
+  ],
+  "format": "source",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": [
+    "prayer-times",
+    "cpp",
+    "java",
+    "javascript",
+    "python",
+    "objective-c",
+    "csharp",
+    "php",
+    "praytimes",
+    "offline"
+  ],
+  "added": "2026-06-30",
+  "attribution": "PrayTimes.org / abodehq"
+}

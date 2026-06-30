@@ -192,6 +192,36 @@
       "endpoint": "https://api.aladhan.com/v1/timings?latitude=51.5&longitude=-0.12&method=2"
     },
     {
+      "id": "alfanous",
+      "name": "Alfanous",
+      "description": "Open-source Arabic Quran search engine that exposes a JSON API with both simple and advanced search (by word, root, translation, and morphology). Self-hostable Python project — the only full-text Quran search engine in the registry.",
+      "category": "quran",
+      "subcategory": "search",
+      "url": "https://github.com/assem-ch/alfanous",
+      "repo": "https://github.com/assem-ch/alfanous",
+      "license": "AGPL-3.0",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "format": "rest-api",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "quran",
+        "search",
+        "search-engine",
+        "morphology",
+        "arabic",
+        "self-hosted",
+        "api"
+      ],
+      "added": "2026-06-30",
+      "attribution": "Assem Chelli / Alfanous team"
+    },
+    {
       "id": "al-quran-cloud",
       "name": "AlQuran Cloud API",
       "description": "Open-source REST API for Quran text and audio in multiple editions and translations. Backed by the Islamic Network organization.",
@@ -220,6 +250,34 @@
       "added": "2026-06-14",
       "attribution": "islamic-network",
       "endpoint": "https://api.alquran.cloud/v1/ayah/262/en.asad"
+    },
+    {
+      "id": "amiri-font",
+      "name": "Amiri Font",
+      "description": "Classical Arabic Naskh typeface designed for typesetting books, with strong support for Quranic text including vocalization marks and ligatures. A de-facto open font for high-quality Quran rendering, released under the SIL Open Font License.",
+      "category": "fonts",
+      "url": "https://www.amirifont.org",
+      "repo": "https://github.com/alif-type/amiri",
+      "license": "OFL-1.1",
+      "languages": [
+        "ar"
+      ],
+      "format": "font",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "font",
+        "naskh",
+        "arabic",
+        "typography",
+        "quran",
+        "typesetting",
+        "ofl"
+      ],
+      "added": "2026-06-30",
+      "attribution": "Khaled Hosny"
     },
     {
       "id": "camel-tools",
@@ -463,6 +521,34 @@
       "attribution": "Sa'id Al-Qahtani (book) / wafaaelmaandy (JSON)"
     },
     {
+      "id": "itl",
+      "name": "ITL — Islamic Tools and Libraries",
+      "description": "Foundational C/C++ library by the Arabeyes project for common Islamic calculations: prayer times, Hijri/Gregorian date conversion, and qibla direction. Long-standing upstream that many downstream prayer-time tools are derived from.",
+      "category": "prayer-times",
+      "url": "https://github.com/arabeyes-org/ITL",
+      "repo": "https://github.com/arabeyes-org/ITL",
+      "license": "LGPL-2.1",
+      "languages": [
+        "ar"
+      ],
+      "format": "source",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "prayer-times",
+        "hijri",
+        "qibla",
+        "c",
+        "cpp",
+        "arabeyes",
+        "offline"
+      ],
+      "added": "2026-06-30",
+      "attribution": "Arabeyes.org"
+    },
+    {
       "id": "masjidi-api",
       "name": "Masjidi API",
       "description": "Open-source REST API providing mosque data via RESTful endpoints: locations (lat/lng, address, contact), prayer times, iqamah times, capacity, events, and services. Crowdsourced iqamah data is its key differentiator from calculated prayer time APIs.",
@@ -638,6 +724,37 @@
       ],
       "added": "2026-06-14",
       "attribution": "mhashim6"
+    },
+    {
+      "id": "pray-times",
+      "name": "Pray-Times",
+      "description": "Prayer time calculation library ported to seven languages — C++, Java, JavaScript, Python, Objective-C, C#/.NET, and PHP — from a single algorithm base (PrayTimes.org). Supports all major calculation methods. Useful when you need native prayer-time math in a language not covered by the Adhan family.",
+      "category": "prayer-times",
+      "url": "https://github.com/abodehq/Pray-Times",
+      "repo": "https://github.com/abodehq/Pray-Times",
+      "license": "LGPL-3.0",
+      "languages": [
+        "ar"
+      ],
+      "format": "source",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "prayer-times",
+        "cpp",
+        "java",
+        "javascript",
+        "python",
+        "objective-c",
+        "csharp",
+        "php",
+        "praytimes",
+        "offline"
+      ],
+      "added": "2026-06-30",
+      "attribution": "PrayTimes.org / abodehq"
     },
     {
       "id": "pyarabic",
@@ -852,6 +969,35 @@
       "endpoint": "https://api.quran.com/api/v4/chapters/1?language=en"
     },
     {
+      "id": "quran-com-images",
+      "name": "Quran.com Mushaf Images",
+      "description": "Official Madani Mushaf word and page glyph images used by Quran.com for pixel-accurate Quran rendering. Useful when font-based rendering is insufficient and exact mushaf typography is required. Actively maintained.",
+      "category": "quran",
+      "subcategory": "images",
+      "url": "https://github.com/quran/quran.com-images",
+      "repo": "https://github.com/quran/quran.com-images",
+      "license": "Free to use",
+      "languages": [
+        "ar"
+      ],
+      "format": "image",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "quran",
+        "mushaf",
+        "images",
+        "glyphs",
+        "madani",
+        "rendering",
+        "typography"
+      ],
+      "added": "2026-06-30",
+      "attribution": "Quran.com"
+    },
+    {
       "id": "quran-arabic-corpus",
       "name": "Quranic Arabic Corpus",
       "description": "Annotated linguistic dataset from the University of Leeds providing word-by-word Arabic grammar, morphology, and syntax for every word in the Quran. Includes part-of-speech tags, roots, lemmas, and syntactic treebank data. The gold standard for Quranic NLP.",
@@ -919,6 +1065,35 @@
       ],
       "added": "2026-06-14",
       "attribution": "Tarteel AI"
+    },
+    {
+      "id": "quranicaudio",
+      "name": "QuranicAudio",
+      "description": "High-quality Quran recitation audio covering a wide range of reciters, with a free JSON API (reciters and surah audio URLs) and full-album downloads. Complements MP3Quran as a second recitation audio source.",
+      "category": "quran",
+      "subcategory": "audio",
+      "url": "https://quranicaudio.com",
+      "docs": "https://quranicaudio.com/api/qaris",
+      "endpoint": "https://quranicaudio.com/api/qaris",
+      "license": "Free to use",
+      "languages": [
+        "ar"
+      ],
+      "format": "rest-api",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "quran",
+        "audio",
+        "recitation",
+        "mp3",
+        "streaming",
+        "reciters"
+      ],
+      "added": "2026-06-30",
+      "attribution": "QuranicAudio.com"
     },
     {
       "id": "salah-rs",
@@ -1071,6 +1246,35 @@
       ],
       "added": "2026-06-14",
       "attribution": "Tanzil.net"
+    },
+    {
+      "id": "ummalqura-calendar",
+      "name": "Umm al-Qura Calendar (Java)",
+      "description": "Java implementation of the Umm al-Qura Hijri calendar that integrates with java.util.Calendar, providing accurate Hijri-Gregorian conversion aligned with the official Saudi calendar. Distributed via Maven Central / JitPack. Fills the Java gap for Islamic date handling.",
+      "category": "calendar",
+      "url": "https://github.com/msarhan/ummalqura-calendar",
+      "repo": "https://github.com/msarhan/ummalqura-calendar",
+      "package": "com.github.msarhan:ummalqura-calendar",
+      "license": "MIT",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "format": "maven",
+      "free": true,
+      "auth_required": false,
+      "scholar_reviewed": false,
+      "maintained": true,
+      "tags": [
+        "hijri",
+        "calendar",
+        "umm-al-qura",
+        "java",
+        "date-conversion",
+        "offline"
+      ],
+      "added": "2026-06-30",
+      "attribution": "Mouaffak A. Sarhan"
     }
   ]
 }

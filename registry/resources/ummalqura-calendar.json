@@ -1,0 +1,30 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "ummalqura-calendar",
+  "name": "Umm al-Qura Calendar (Java)",
+  "description": "Java implementation of the Umm al-Qura Hijri calendar that integrates with java.util.Calendar, providing accurate Hijri-Gregorian conversion aligned with the official Saudi calendar. Distributed via Maven Central / JitPack. Fills the Java gap for Islamic date handling.",
+  "category": "calendar",
+  "url": "https://github.com/msarhan/ummalqura-calendar",
+  "repo": "https://github.com/msarhan/ummalqura-calendar",
+  "package": "com.github.msarhan:ummalqura-calendar",
+  "license": "MIT",
+  "languages": [
+    "ar",
+    "en"
+  ],
+  "format": "maven",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": [
+    "hijri",
+    "calendar",
+    "umm-al-qura",
+    "java",
+    "date-conversion",
+    "offline"
+  ],
+  "added": "2026-06-30",
+  "attribution": "Mouaffak A. Sarhan"
+}

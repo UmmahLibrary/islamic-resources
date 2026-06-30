@@ -16,7 +16,7 @@
     "description": { "type": "string" },
     "category": {
       "type": "string",
-      "enum": ["quran", "hadith", "prayer-times", "tafsir", "duas", "calendar", "names", "general"]
+      "enum": ["quran", "hadith", "prayer-times", "tafsir", "duas", "calendar", "names", "fonts", "general"]
     },
     "subcategory": { "type": "string" },
     "url": { "type": "string", "format": "uri" },
@@ -39,7 +39,7 @@
     },
     "format": {
       "type": "string",
-      "enum": ["rest-api", "npm", "pip", "swift", "maven", "cargo", "pub", "json", "xml", "csv", "graphql", "sqlite"]
+      "enum": ["rest-api", "npm", "pip", "swift", "maven", "cargo", "pub", "json", "xml", "csv", "graphql", "sqlite", "source", "font", "image"]
     },
     "free": { "type": "boolean" },
     "auth_required": { "type": "boolean" },

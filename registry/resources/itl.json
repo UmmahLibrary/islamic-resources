@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "itl",
+  "name": "ITL — Islamic Tools and Libraries",
+  "description": "Foundational C/C++ library by the Arabeyes project for common Islamic calculations: prayer times, Hijri/Gregorian date conversion, and qibla direction. Long-standing upstream that many downstream prayer-time tools are derived from.",
+  "category": "prayer-times",
+  "url": "https://github.com/arabeyes-org/ITL",
+  "repo": "https://github.com/arabeyes-org/ITL",
+  "license": "LGPL-2.1",
+  "languages": [
+    "ar"
+  ],
+  "format": "source",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": [
+    "prayer-times",
+    "hijri",
+    "qibla",
+    "c",
+    "cpp",
+    "arabeyes",
+    "offline"
+  ],
+  "added": "2026-06-30",
+  "attribution": "Arabeyes.org"
+}

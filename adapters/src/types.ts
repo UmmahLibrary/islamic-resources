@@ -6,6 +6,7 @@ export type ResourceCategory =
   | 'duas'
   | 'calendar'
   | 'names'
+  | 'fonts'
   | 'general';
 
 export type ResourceFormat =
@@ -20,7 +21,10 @@ export type ResourceFormat =
   | 'xml'
   | 'csv'
   | 'graphql'
-  | 'sqlite';
+  | 'sqlite'
+  | 'source'
+  | 'font'
+  | 'image';
 
 export interface Resource {
   id: string;

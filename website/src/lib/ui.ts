@@ -19,6 +19,7 @@ export const CATEGORIES: CategoryMeta[] = [
   { key: 'duas', label: 'Duas', blurb: 'Supplications and adhkar with Arabic, transliteration, translation, and sourcing.' },
   { key: 'calendar', label: 'Calendar', blurb: 'Hijri–Gregorian conversion and Islamic calendar utilities across platforms.' },
   { key: 'names', label: 'Names of Allah', blurb: 'Asma ul-Husna — the ninety-nine names with transliteration and meaning.' },
+  { key: 'fonts', label: 'Fonts', blurb: 'Arabic typefaces and mushaf glyph assets for high-quality Quran rendering and typesetting.' },
   { key: 'general', label: 'General', blurb: 'CDNs, toolkits, and cross-cutting datasets that power Islamic apps.' },
 ];
 
@@ -60,6 +61,7 @@ const CAT_GLYPHS: Record<string, string> = {
   duas: '<path d="M12 20s-6.5-4.2-6.5-9.3A3.8 3.8 0 0 1 12 8a3.8 3.8 0 0 1 6.5 2.7C18.5 15.8 12 20 12 20Z"/>',
   calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/>',
   names: '<rect x="6" y="6" width="12" height="12" rx="1"/><rect x="6" y="6" width="12" height="12" rx="1" transform="rotate(45 12 12)"/>',
+  fonts: '<path d="M6 19 10.5 5h3L18 19"/><line x1="8" y1="14" x2="16" y2="14"/>',
   general: '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>',
 };
 

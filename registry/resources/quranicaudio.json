@@ -1,0 +1,30 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "quranicaudio",
+  "name": "QuranicAudio",
+  "description": "High-quality Quran recitation audio covering a wide range of reciters, with a free JSON API (reciters and surah audio URLs) and full-album downloads. Complements MP3Quran as a second recitation audio source.",
+  "category": "quran",
+  "subcategory": "audio",
+  "url": "https://quranicaudio.com",
+  "docs": "https://quranicaudio.com/api/qaris",
+  "endpoint": "https://quranicaudio.com/api/qaris",
+  "license": "Free to use",
+  "languages": [
+    "ar"
+  ],
+  "format": "rest-api",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": [
+    "quran",
+    "audio",
+    "recitation",
+    "mp3",
+    "streaming",
+    "reciters"
+  ],
+  "added": "2026-06-30",
+  "attribution": "QuranicAudio.com"
+}

@@ -29,7 +29,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Categories
 
-`quran` · `hadith` · `prayer-times` · `tafsir` · `duas` · `calendar` · `names` · `general`
+`quran` · `hadith` · `prayer-times` · `tafsir` · `duas` · `calendar` · `names` · `fonts` · `general`
 
 ## License
 

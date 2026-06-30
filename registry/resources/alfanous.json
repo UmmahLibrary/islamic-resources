@@ -1,0 +1,31 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "alfanous",
+  "name": "Alfanous",
+  "description": "Open-source Arabic Quran search engine that exposes a JSON API with both simple and advanced search (by word, root, translation, and morphology). Self-hostable Python project — the only full-text Quran search engine in the registry.",
+  "category": "quran",
+  "subcategory": "search",
+  "url": "https://github.com/assem-ch/alfanous",
+  "repo": "https://github.com/assem-ch/alfanous",
+  "license": "AGPL-3.0",
+  "languages": [
+    "ar",
+    "en"
+  ],
+  "format": "rest-api",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": [
+    "quran",
+    "search",
+    "search-engine",
+    "morphology",
+    "arabic",
+    "self-hosted",
+    "api"
+  ],
+  "added": "2026-06-30",
+  "attribution": "Assem Chelli / Alfanous team"
+}

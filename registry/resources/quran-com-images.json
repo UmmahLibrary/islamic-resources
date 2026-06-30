@@ -1,0 +1,30 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "quran-com-images",
+  "name": "Quran.com Mushaf Images",
+  "description": "Official Madani Mushaf word and page glyph images used by Quran.com for pixel-accurate Quran rendering. Useful when font-based rendering is insufficient and exact mushaf typography is required. Actively maintained.",
+  "category": "quran",
+  "subcategory": "images",
+  "url": "https://github.com/quran/quran.com-images",
+  "repo": "https://github.com/quran/quran.com-images",
+  "license": "Free to use",
+  "languages": [
+    "ar"
+  ],
+  "format": "image",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": [
+    "quran",
+    "mushaf",
+    "images",
+    "glyphs",
+    "madani",
+    "rendering",
+    "typography"
+  ],
+  "added": "2026-06-30",
+  "attribution": "Quran.com"
+}

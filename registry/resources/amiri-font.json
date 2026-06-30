@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schemas/resource.schema.json",
+  "id": "amiri-font",
+  "name": "Amiri Font",
+  "description": "Classical Arabic Naskh typeface designed for typesetting books, with strong support for Quranic text including vocalization marks and ligatures. A de-facto open font for high-quality Quran rendering, released under the SIL Open Font License.",
+  "category": "fonts",
+  "url": "https://www.amirifont.org",
+  "repo": "https://github.com/alif-type/amiri",
+  "license": "OFL-1.1",
+  "languages": [
+    "ar"
+  ],
+  "format": "font",
+  "free": true,
+  "auth_required": false,
+  "scholar_reviewed": false,
+  "maintained": true,
+  "tags": [
+    "font",
+    "naskh",
+    "arabic",
+    "typography",
+    "quran",
+    "typesetting",
+    "ofl"
+  ],
+  "added": "2026-06-30",
+  "attribution": "Khaled Hosny"
+}

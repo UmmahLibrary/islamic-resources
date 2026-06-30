@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://resources.ummahlibrary.org/sitemap-index.xml

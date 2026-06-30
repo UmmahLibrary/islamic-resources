@@ -9,6 +9,7 @@
     "typecheck": "astro check"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "@islamic-resources/adapters": "workspace:*",
     "astro": "^4.16.18"
   },
